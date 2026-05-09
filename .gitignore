@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+data/raw/
+data/processed/
+data/reports/*.md
+.DS_Store
+.idea/
+.vscode/

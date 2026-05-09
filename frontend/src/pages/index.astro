@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StatCard from '../components/StatCard.astro';
+import RepoCard from '../components/RepoCard.astro';
+import CategoryChart from '../components/CategoryChart.astro';
+import LanguageBar from '../components/LanguageBar.astro';
+import fs from 'fs';
+import path from 'path';
+
+let report: any = null;
+const latestPath = path.resolve('../data/reports/latest.json');
+try {
+  if (fs.existsSync(latestPath)) {
+    report = JSON.parse(fs.readFileSync(latestPath, 'utf-8'));
+  }
+} catch {}
+
+const hasData = report && report.total_repos > 0;
+const topRepos = report?.top_repos?.slice(0, 10) || [];
+const newEntrants = report?.new_entrants || [];
+const categories = report?.categories || [];
+const languages = report?.languages || [];
+const insight = report?.insight_zh || '';
+---
+
+<Layout title="今日趋势">
+  <!-- Hero Stats -->
+  <section class="animate-fade-in">
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl font-bold text-neutral-900">今日概览</h1>
+      {hasData && (
+        <span class="px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-600 rounded-full">{report.date}</span>
+      )}
+    </div>
+
+    {hasData ? (
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <StatCard label="AI 项目" value={report.total_ai_repos} color="text-purple-500" />
+        <StatCard label="分类数" value={categories.length} color="text-cyan-500" />
+        {categories.length > 0 && (
+          <StatCard label="最热分类" value={categories[0].name} trend={`${categories[0].count} 个项目`} color="text-amber-500" />
+        )}
+        {newEntrants.length > 0 && (
+          <StatCard label="新星项目" value={newEntrants.length} trend="今日新上榜" />
+        )}
+      </div>
+    ) : (
+      <div class="bg-white rounded-lg border border-neutral-200 p-8 text-center">
+        <p class="text-neutral-400 text-lg mb-2">📊 暂无数据</p>
+        <p class="text-neutral-400 text-sm">运行 <code class="px-2 py-1 bg-neutral-100 rounded text-xs">python -m src.pipeline</code> 获取今日数据</p>
+      </div>
+    )}
+  </section>
+
+  <!-- Insight -->
+  {insight && (
+    <section class="animate-fade-in">
+      <div class="bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg p-4">
+        <div class="flex items-start gap-3">
+          <span class="text-xl">🤖</span>
+          <div>
+            <p class="text-sm font-medium text-indigo-700 mb-1">AI 今日洞察</p>
+            <p class="text-sm text-indigo-600">{insight}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Charts -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in">
+    {categories.length > 0 && <CategoryChart categories={categories} />}
+    {languages.length > 0 && <LanguageBar languages={languages} />}
+  </div>
+
+  <!-- Top 10 -->
+  {topRepos.length > 0 && (
+    <section class="animate-fade-in">
+      <h2 class="text-lg font-semibold text-neutral-800 mb-4">🔥 今日热门 Top 10</h2>
+      <div class="space-y-3">
+        {topRepos.map((repo: any) => <RepoCard repo={repo} />)}
+      </div>
+    </section>
+  )}
+
+  <!-- New Entrants -->
+  {newEntrants.length > 0 && (
+    <section class="animate-fade-in">
+      <h2 class="text-lg font-semibold text-neutral-800 mb-4">🆕 新星项目（首次上榜）</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {newEntrants.slice(0, 6).map((repo: any) => (
+          <div class="bg-white rounded-lg border border-neutral-200 p-4 flex items-center gap-3">
+            <span class="text-xs font-bold text-indigo-500 bg-indigo-50 px-2 py-1 rounded shrink-0">NEW</span>
+            <div class="min-w-0 flex-1">
+              <a href={repo.url} target="_blank" class="text-sm font-semibold text-neutral-900 hover:text-primary-500 truncate block no-underline">
+                {repo.name}
+              </a>
+              <p class="text-xs text-neutral-400 truncate">{repo.description?.slice(0, 60)}</p>
+            </div>
+            <span class="text-sm font-medium text-green-500 shrink-0">+{repo.stars_today}/天</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>

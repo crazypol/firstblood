@@ -1,0 +1,79 @@
+---
+export interface Repo {
+  rank: number;
+  name: string;
+  url: string;
+  description: string;
+  language: string;
+  stars: number;
+  stars_today: number;
+  forks: number;
+  ai_category: string;
+  ai_subcategories: string[];
+  summary_zh?: string;
+}
+
+const { repo } = Astro.props as { repo: Repo };
+const isTop3 = repo.rank >= 1 && repo.rank <= 3;
+
+const catStyle: Record<string, string> = {
+  llm: 'bg-purple-100 text-purple-700',
+  agent: 'bg-cyan-100 text-cyan-700',
+  rag: 'bg-emerald-100 text-emerald-700',
+  mcp: 'bg-amber-100 text-amber-700',
+  multimodal: 'bg-pink-100 text-pink-700',
+  ai_tooling: 'bg-blue-100 text-blue-700',
+  ai_infra: 'bg-slate-100 text-slate-700',
+  ai_safety: 'bg-red-100 text-red-700',
+  ml_platform: 'bg-teal-100 text-teal-700',
+  reasoning: 'bg-orange-100 text-orange-700',
+  code_generation: 'bg-purple-100 text-purple-700',
+};
+
+const style = catStyle[repo.ai_category] || 'bg-neutral-100 text-neutral-600';
+---
+
+<div class="bg-white rounded-lg border border-neutral-200 shadow-sm p-5 transition-all duration-200 hover:shadow-md animate-fade-in">
+  <div class="flex items-start justify-between gap-4">
+    <div class="flex-1 min-w-0">
+      <!-- Rank + Name -->
+      <div class="flex items-center gap-2 mb-1">
+        {isTop3 ? (
+          <span class="text-lg">{['🥇', '🥈', '🥉'][repo.rank - 1]}</span>
+        ) : (
+          <span class="text-sm font-medium text-neutral-400">#{repo.rank}</span>
+        )}
+        <a href={repo.url} target="_blank" class="text-base font-semibold text-neutral-900 hover:text-primary-500 transition-colors truncate no-underline">
+          {repo.name}
+        </a>
+      </div>
+
+      <!-- Description -->
+      <p class="text-sm text-neutral-500 line-clamp-2 mb-3">{repo.description}</p>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-3">
+        <span class={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${style}`}>{repo.ai_category}</span>
+        {repo.ai_subcategories?.slice(0, 2).map(s => (
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-500">{s}</span>
+        ))}
+        {repo.language && (
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-500">{repo.language}</span>
+        )}
+      </div>
+
+      <!-- Stats -->
+      <div class="flex items-center gap-4 text-sm text-neutral-500">
+        <span class="font-medium text-neutral-700">⭐ {repo.stars?.toLocaleString()}</span>
+        {repo.stars_today > 0 && <span class="text-green-500 font-medium">+{repo.stars_today}/天</span>}
+        <span>🍴 {repo.forks?.toLocaleString()}</span>
+      </div>
+
+      {repo.summary_zh && (
+        <p class="mt-3 text-xs text-primary-600 bg-primary-50 px-3 py-2 rounded-md">
+          💡 {repo.summary_zh}
+        </p>
+      )}
+    </div>
+  </div>
+</div>

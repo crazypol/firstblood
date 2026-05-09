@@ -1,0 +1,21 @@
+---
+export interface Props {
+  label: string;
+  value: string | number;
+  trend?: string;
+  trendUp?: boolean;
+  color?: string;
+}
+
+const { label, value, trend, trendUp = true, color = 'text-primary-500' } = Astro.props;
+---
+
+<div class="bg-white rounded-lg border border-neutral-200 shadow-sm p-5 transition-all duration-200 hover:shadow-md">
+  <p class="text-sm text-neutral-500 mb-1">{label}</p>
+  <p class={`text-3xl font-bold ${color}`}>{value}</p>
+  {trend && (
+    <p class={`text-sm mt-1 ${trendUp ? 'text-green-500' : 'text-red-500'}`}>
+      {trendUp ? '↑' : '↓'} {trend}
+    </p>
+  )}
+</div>

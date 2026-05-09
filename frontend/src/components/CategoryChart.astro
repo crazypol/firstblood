@@ -1,0 +1,43 @@
+---
+export interface Category {
+  name: string;
+  count: number;
+  percentage: number;
+}
+
+const { categories } = Astro.props as { categories: Category[] };
+
+const colors: Record<string, string> = {
+  llm: '#8b5cf6',
+  agent: '#06b6d4',
+  rag: '#10b981',
+  mcp: '#f59e0b',
+  multimodal: '#ec4899',
+  ai_tooling: '#3b82f6',
+  ai_infra: '#64748b',
+  ai_safety: '#ef4444',
+  ml_platform: '#14b8a6',
+  reasoning: '#f97316',
+  code_generation: '#8b5cf6',
+};
+---
+
+<div class="bg-white rounded-lg border border-neutral-200 shadow-sm p-5">
+  <h3 class="text-sm font-semibold text-neutral-700 mb-4">AI 子领域分布</h3>
+  <div class="space-y-3">
+    {categories.map(cat => {
+      const color = colors[cat.name] || '#94a3b8';
+      return (
+        <div>
+          <div class="flex items-center justify-between text-sm mb-1">
+            <span class="font-medium text-neutral-700">{cat.name}</span>
+            <span class="text-neutral-500">{cat.count} ({cat.percentage}%)</span>
+          </div>
+          <div class="w-full bg-neutral-100 rounded-full h-2 overflow-hidden">
+            <div class="h-full rounded-full transition-all duration-500" style={`width: ${cat.percentage}%; background-color: ${color}`}></div>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>

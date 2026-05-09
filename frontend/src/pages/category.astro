@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RepoCard from '../components/RepoCard.astro';
+import fs from 'fs';
+import path from 'path';
+
+let report: any = null;
+const latestPath = path.resolve('../data/reports/latest.json');
+try {
+  if (fs.existsSync(latestPath)) {
+    report = JSON.parse(fs.readFileSync(latestPath, 'utf-8'));
+  }
+} catch {}
+
+const categories = report?.categories || [];
+const allRepos = report?.top_repos || [];
+const activeCat = Astro.url.searchParams.get('cat') || '';
+const filteredRepos = activeCat ? allRepos.filter((r: any) => r.ai_category === activeCat) : allRepos;
+---
+
+<Layout title="分类浏览">
+  <section class="animate-fade-in">
+    <h1 class="text-2xl font-bold text-neutral-900 mb-2">分类浏览</h1>
+    <p class="text-sm text-neutral-500 mb-6">按 AI 子领域筛选浏览热门项目</p>
+
+    <!-- Pills -->
+    <div class="flex flex-wrap gap-2 mb-6">
+      <a href="/firstblood/category"
+        class={`px-4 py-2 text-sm font-medium rounded-full border transition-colors no-underline ${
+          !activeCat ? 'bg-indigo-500 text-white border-indigo-500' : 'bg-white text-neutral-600 border-neutral-200 hover:bg-neutral-50'
+        }`}>全部</a>
+      {categories.map((cat: any) => {
+        const isActive = activeCat === cat.name;
+        return (
+          <a href={`/firstblood/category?cat=${cat.name}`}
+            class={`px-4 py-2 text-sm font-medium rounded-full border transition-colors no-underline ${
+              isActive ? 'bg-indigo-500 text-white border-indigo-500' : 'bg-white text-neutral-600 border-neutral-200 hover:bg-neutral-50'
+            }`}>
+            {cat.name} ({cat.count})
+          </a>
+        );
+      })}
+    </div>
+
+    {filteredRepos.length > 0 ? (
+      <div class="space-y-3">
+        {filteredRepos.map((repo: any) => <RepoCard repo={repo} />)}
+      </div>
+    ) : (
+      <div class="bg-white rounded-lg border border-neutral-200 p-12 text-center">
+        <p class="text-neutral-400 text-lg mb-2">📭 暂无项目</p>
+        <p class="text-neutral-400 text-sm">该分类下暂无数据</p>
+      </div>
+    )}
+  </section>
+</Layout>

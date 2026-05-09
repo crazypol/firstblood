@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+let reports: string[] = [];
+const reportsDir = path.resolve('../data/reports');
+try {
+  if (fs.existsSync(reportsDir)) {
+    reports = fs.readdirSync(reportsDir).filter(f => f.endsWith('.json') && f !== 'latest.json').sort().reverse();
+  }
+} catch {}
+
+const selectedDate = Astro.url.searchParams.get('date') || '';
+let report: any = null;
+if (selectedDate) {
+  try { report = JSON.parse(fs.readFileSync(path.join(reportsDir, `${selectedDate}.json`), 'utf-8')); } catch {}
+}
+if (!report) {
+  try { report = JSON.parse(fs.readFileSync(path.join(reportsDir, 'latest.json'), 'utf-8')); } catch {}
+}
+
+const hasData = report && report.total_repos > 0;
+---
+
+<Layout title="历史报告">
+  <section class="animate-fade-in">
+    <h1 class="text-2xl font-bold text-neutral-900 mb-2">历史报告</h1>
+    <p class="text-sm text-neutral-500 mb-6">查看每日趋势报告</p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <!-- Sidebar -->
+      <div class="lg:col-span-1">
+        <div class="bg-white rounded-lg border border-neutral-200 p-4">
+          <h3 class="text-sm font-semibold text-neutral-700 mb-3">报告列表</h3>
+          {reports.length > 0 ? (
+            <ul class="space-y-1">
+              {reports.map(f => {
+                const d = f.replace('.json', '');
+                const active = d === (selectedDate || report?.date);
+                return (
+                  <li><a href={`/firstblood/report?date=${d}`}
+                    class={`block px-3 py-2 text-sm rounded-md transition-colors no-underline ${
+                      active ? 'bg-indigo-50 text-indigo-600 font-medium' : 'text-neutral-600 hover:bg-neutral-50'
+                    }`}>📄 {d}</a></li>
+                );
+              })}
+            </ul>
+          ) : <p class="text-sm text-neutral-400">暂无历史报告</p>}
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="lg:col-span-3">
+        {hasData ? (
+          <div class="bg-white rounded-lg border border-neutral-200 p-6">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-xl font-bold text-neutral-900">📋 每日趋势报告 · {report.date}</h2>
+              <a href={`/firstblood/data/reports/${report.date}.json`} class="inline-flex items-center px-4 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 no-underline" download>JSON</a>
+            </div>
+
+            {report.insight_zh && (
+              <div class="bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg p-4 mb-6">
+                <p class="text-sm text-indigo-700"><strong>执行摘要：</strong>{report.insight_zh}</p>
+              </div>
+            )}
+
+            <div class="overflow-x-auto mb-6">
+              <h3 class="text-sm font-semibold text-neutral-700 mb-3">统计数据</h3>
+              <table class="w-full text-sm">
+                <thead><tr class="border-b border-neutral-200">
+                  <th class="text-left py-2 font-medium text-neutral-500">指标</th>
+                  <th class="text-right py-2 font-medium text-neutral-500">数值</th>
+                </tr></thead>
+                <tbody>
+                  <tr class="border-b border-neutral-100">
+                    <td class="py-2 text-neutral-700">收录项目总数</td>
+                    <td class="text-right font-medium">{report.total_repos}</td>
+                  </tr>
+                  <tr class="border-b border-neutral-100">
+                    <td class="py-2 text-neutral-700">AI 相关项目</td>
+                    <td class="text-right font-medium">{report.total_ai_repos}</td>
+                  </tr>
+                  <tr class="border-b border-neutral-100">
+                    <td class="py-2 text-neutral-700">分类数</td>
+                    <td class="text-right font-medium">{report.categories?.length || 0}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {report.top_repos?.length > 0 && (
+              <div>
+                <h3 class="text-sm font-semibold text-neutral-700 mb-3">完整项目列表</h3>
+                <div class="overflow-x-auto">
+                  <table class="w-full text-sm">
+                    <thead><tr class="border-b border-neutral-200">
+                      <th class="text-left py-2 font-medium text-neutral-400">#</th>
+                      <th class="text-left py-2 font-medium text-neutral-400">名称</th>
+                      <th class="text-right py-2 font-medium text-neutral-400">Stars</th>
+                      <th class="text-right py-2 font-medium text-neutral-400">+ 今日</th>
+                      <th class="text-right py-2 font-medium text-neutral-400">分类</th>
+                    </tr></thead>
+                    <tbody>
+                      {report.top_repos.map((repo: any) => (
+                        <tr class="border-b border-neutral-100 hover:bg-neutral-50">
+                          <td class="py-2 text-neutral-400">#{repo.rank}</td>
+                          <td class="py-2">
+                            <a href={repo.url} target="_blank" class="text-indigo-600 hover:underline no-underline font-medium">{repo.name}</a>
+                          </td>
+                          <td class="py-2 text-right font-medium">{repo.stars?.toLocaleString()}</td>
+                          <td class="py-2 text-right text-green-500 font-medium">+{repo.stars_today}</td>
+                          <td class="py-2 text-right">
+                            <span class="text-xs px-2 py-0.5 bg-neutral-100 rounded-full">{repo.ai_category}</span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div class="bg-white rounded-lg border border-neutral-200 p-12 text-center">
+            <p class="text-neutral-400 text-lg mb-2">📭 暂无数据</p>
+            <p class="text-neutral-400 text-sm">运行流水线获取数据后即可查看报告</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
