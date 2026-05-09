@@ -1,23 +1,23 @@
 {
   "date": "2026-05-09",
-  "generated_at": "2026-05-09T01:56:29.070180",
+  "generated_at": "2026-05-09T02:46:31.640050",
   "total_repos": 12,
-  "total_ai_repos": 8,
+  "total_ai_repos": 7,
   "categories": [
     {
       "name": "agent",
-      "count": 4,
-      "percentage": 50.0
+      "count": 3,
+      "percentage": 42.9
     },
     {
       "name": "llm",
-      "count": 3,
-      "percentage": 37.5
+      "count": 2,
+      "percentage": 28.6
     },
     {
       "name": "ai_tooling",
-      "count": 1,
-      "percentage": 12.5
+      "count": 2,
+      "percentage": 28.6
     }
   ],
   "languages": [
@@ -59,17 +59,10 @@
       "url": "https://github.com/Hmbown/DeepSeek-TUI",
       "description": "Coding agent for DeepSeek models that runs in your terminal",
       "language": "Rust",
-      "topics": [
-        "cli",
-        "deepseek",
-        "llm",
-        "rust",
-        "terminal",
-        "tui"
-      ],
-      "stars": 21887,
+      "topics": [],
+      "stars": 3731,
       "stars_today": 3731,
-      "forks": 1707,
+      "forks": 1720,
       "author": "Hmbown",
       "author_url": "https://github.com/Hmbown",
       "ai_category": "llm",
@@ -77,7 +70,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.967071"
+      "fetched_at": "2026-05-09T02:46:31.617739"
     },
     {
       "rank": 2,
@@ -88,7 +81,7 @@
       "topics": [],
       "stars": 3660,
       "stars_today": 3660,
-      "forks": 1917,
+      "forks": 1929,
       "author": "anthropics",
       "author_url": "https://github.com/anthropics",
       "ai_category": "uncategorized",
@@ -96,7 +89,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.963491"
+      "fetched_at": "2026-05-09T02:46:31.614158"
     },
     {
       "rank": 3,
@@ -104,17 +97,10 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
       "language": "Shell",
-      "topics": [
-        "agent-skills",
-        "antigravity",
-        "antigravity-ide",
-        "claude-code",
-        "cursor",
-        "skills"
-      ],
-      "stars": 35516,
+      "topics": [],
+      "stars": 1893,
       "stars_today": 1893,
-      "forks": 4031,
+      "forks": 4039,
       "author": "addyosmani",
       "author_url": "https://github.com/addyosmani",
       "ai_category": "agent",
@@ -124,7 +110,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.965320"
+      "fetched_at": "2026-05-09T02:46:31.615978"
     },
     {
       "rank": 4,
@@ -132,42 +118,18 @@
       "url": "https://github.com/decolua/9router",
       "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "topics": [
-        "claude-code",
-        "cursor",
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "cline",
-        "codex",
-        "copilot",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "stars": 5634,
+      "topics": [],
+      "stars": 1052,
       "stars_today": 1052,
-      "forks": 1073,
+      "forks": 1076,
       "author": "decolua",
       "author_url": "https://github.com/decolua",
-      "ai_category": "llm",
-      "ai_subcategories": [
-        "agent",
-        "ai_tooling"
-      ],
+      "ai_category": "ai_tooling",
+      "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.970456"
+      "fetched_at": "2026-05-09T02:46:31.621418"
     },
     {
       "rank": 5,
@@ -175,26 +137,18 @@
       "url": "https://github.com/datawhalechina/hello-agents",
       "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
       "language": "Python",
-      "topics": [
-        "agent",
-        "tutorial",
-        "llm",
-        "rag"
-      ],
-      "stars": 44667,
+      "topics": [],
+      "stars": 667,
       "stars_today": 667,
-      "forks": 5426,
+      "forks": 5437,
       "author": "datawhalechina",
       "author_url": "https://github.com/datawhalechina",
       "ai_category": "agent",
-      "ai_subcategories": [
-        "llm",
-        "rag"
-      ],
+      "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.982303"
+      "fetched_at": "2026-05-09T02:46:31.632650"
     },
     {
       "rank": 6,
@@ -202,29 +156,8 @@
       "url": "https://github.com/LearningCircuit/local-deep-research",
       "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "language": "Python",
-      "topics": [
-        "academia",
-        "arxiv",
-        "brave",
-        "deep-research",
-        "local",
-        "local-llm",
-        "mistral",
-        "pubmed",
-        "research",
-        "research-tool",
-        "retrieval-augmented-generation",
-        "searxng",
-        "self-hosted",
-        "local-deep-research",
-        "home-automation",
-        "homeserver",
-        "ollama",
-        "anthropic",
-        "openai",
-        "encryption"
-      ],
-      "stars": 6753,
+      "topics": [],
+      "stars": 559,
       "stars_today": 559,
       "forks": 599,
       "author": "LearningCircuit",
@@ -234,7 +167,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.978446"
+      "fetched_at": "2026-05-09T02:46:31.628855"
     },
     {
       "rank": 7,
@@ -242,39 +175,18 @@
       "url": "https://github.com/CloakHQ/CloakBrowser",
       "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
       "language": "Python",
-      "topics": [
-        "anti-detect",
-        "bot-detection",
-        "browser-automation",
-        "chromium",
-        "cloudflare",
-        "fingerprint",
-        "playwright",
-        "recaptcha",
-        "stealth-browser",
-        "web-scraping",
-        "ai-agents",
-        "antidetect-browser",
-        "captcha-bypass",
-        "cloudflare-bypass",
-        "headless-browser",
-        "puppeteer",
-        "python",
-        "selenium",
-        "undetected",
-        "webscraping"
-      ],
-      "stars": 3080,
+      "topics": [],
+      "stars": 526,
       "stars_today": 526,
-      "forks": 246,
+      "forks": 250,
       "author": "CloakHQ",
       "author_url": "https://github.com/CloakHQ",
-      "ai_category": "agent",
+      "ai_category": "uncategorized",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.972294"
+      "fetched_at": "2026-05-09T02:46:31.623196"
     },
     {
       "rank": 8,
@@ -283,9 +195,9 @@
       "description": "DFlash: Block Diffusion for Flash Speculative Decoding",
       "language": "Python",
       "topics": [],
-      "stars": 3861,
+      "stars": 379,
       "stars_today": 379,
-      "forks": 266,
+      "forks": 268,
       "author": "z-lab",
       "author_url": "https://github.com/z-lab",
       "ai_category": "uncategorized",
@@ -293,7 +205,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.968740"
+      "fetched_at": "2026-05-09T02:46:31.619420"
     },
     {
       "rank": 9,
@@ -302,9 +214,9 @@
       "description": "\"AI-Trader: 100% Fully-Automated Agent-Native Trading\"",
       "language": "Python",
       "topics": [],
-      "stars": 14666,
+      "stars": 202,
       "stars_today": 202,
-      "forks": 2437,
+      "forks": 2442,
       "author": "HKUDS",
       "author_url": "https://github.com/HKUDS",
       "ai_category": "uncategorized",
@@ -312,7 +224,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.976160"
+      "fetched_at": "2026-05-09T02:46:31.626809"
     },
     {
       "rank": 10,
@@ -320,33 +232,18 @@
       "url": "https://github.com/lobehub/lobehub",
       "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
       "language": "TypeScript",
-      "topics": [
-        "chatgpt",
-        "openai",
-        "ai",
-        "gpt",
-        "claude",
-        "gemini",
-        "knowledge-base",
-        "deepseek",
-        "agent",
-        "mcp",
-        "agent-harness",
-        "agent-collaboration"
-      ],
-      "stars": 76516,
+      "topics": [],
+      "stars": 125,
       "stars_today": 125,
-      "forks": 15112,
+      "forks": 15115,
       "author": "lobehub",
       "author_url": "https://github.com/lobehub",
       "ai_category": "agent",
-      "ai_subcategories": [
-        "mcp"
-      ],
+      "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.980577"
+      "fetched_at": "2026-05-09T02:46:31.630917"
     },
     {
       "rank": 11,
@@ -355,9 +252,9 @@
       "description": "",
       "language": "Dart",
       "topics": [],
-      "stars": 1688,
+      "stars": 118,
       "stars_today": 118,
-      "forks": 93,
+      "forks": 94,
       "author": "flutter",
       "author_url": "https://github.com/flutter",
       "ai_category": "uncategorized",
@@ -365,7 +262,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.984051"
+      "fetched_at": "2026-05-09T02:46:31.634415"
     },
     {
       "rank": 12,
@@ -374,9 +271,9 @@
       "description": "AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents",
       "language": "Python",
       "topics": [],
-      "stars": 1773,
+      "stars": 58,
       "stars_today": 58,
-      "forks": 305,
+      "forks": 306,
       "author": "awslabs",
       "author_url": "https://github.com/awslabs",
       "ai_category": "ai_tooling",
@@ -384,7 +281,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.974288"
+      "fetched_at": "2026-05-09T02:46:31.625025"
     }
   ],
   "new_entrants": [],
@@ -395,17 +292,10 @@
       "url": "https://github.com/Hmbown/DeepSeek-TUI",
       "description": "Coding agent for DeepSeek models that runs in your terminal",
       "language": "Rust",
-      "topics": [
-        "cli",
-        "deepseek",
-        "llm",
-        "rust",
-        "terminal",
-        "tui"
-      ],
-      "stars": 21887,
+      "topics": [],
+      "stars": 3731,
       "stars_today": 3731,
-      "forks": 1707,
+      "forks": 1720,
       "author": "Hmbown",
       "author_url": "https://github.com/Hmbown",
       "ai_category": "llm",
@@ -413,7 +303,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.967071"
+      "fetched_at": "2026-05-09T02:46:31.617739"
     },
     {
       "rank": 3,
@@ -421,17 +311,10 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
       "language": "Shell",
-      "topics": [
-        "agent-skills",
-        "antigravity",
-        "antigravity-ide",
-        "claude-code",
-        "cursor",
-        "skills"
-      ],
-      "stars": 35516,
+      "topics": [],
+      "stars": 1893,
       "stars_today": 1893,
-      "forks": 4031,
+      "forks": 4039,
       "author": "addyosmani",
       "author_url": "https://github.com/addyosmani",
       "ai_category": "agent",
@@ -441,7 +324,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.965320"
+      "fetched_at": "2026-05-09T02:46:31.615978"
     },
     {
       "rank": 4,
@@ -449,42 +332,18 @@
       "url": "https://github.com/decolua/9router",
       "description": "Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.",
       "language": "JavaScript",
-      "topics": [
-        "claude-code",
-        "cursor",
-        "ai-agents",
-        "ai-gateway",
-        "anthropic",
-        "chatgpt",
-        "claude",
-        "cline",
-        "codex",
-        "copilot",
-        "deepseek",
-        "free-ai",
-        "gemini",
-        "gemini-cli",
-        "llm",
-        "llm-gateway",
-        "openai",
-        "openai-proxy",
-        "qwen",
-        "token-saver"
-      ],
-      "stars": 5634,
+      "topics": [],
+      "stars": 1052,
       "stars_today": 1052,
-      "forks": 1073,
+      "forks": 1076,
       "author": "decolua",
       "author_url": "https://github.com/decolua",
-      "ai_category": "llm",
-      "ai_subcategories": [
-        "agent",
-        "ai_tooling"
-      ],
+      "ai_category": "ai_tooling",
+      "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.970456"
+      "fetched_at": "2026-05-09T02:46:31.621418"
     },
     {
       "rank": 5,
@@ -492,26 +351,18 @@
       "url": "https://github.com/datawhalechina/hello-agents",
       "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
       "language": "Python",
-      "topics": [
-        "agent",
-        "tutorial",
-        "llm",
-        "rag"
-      ],
-      "stars": 44667,
+      "topics": [],
+      "stars": 667,
       "stars_today": 667,
-      "forks": 5426,
+      "forks": 5437,
       "author": "datawhalechina",
       "author_url": "https://github.com/datawhalechina",
       "ai_category": "agent",
-      "ai_subcategories": [
-        "llm",
-        "rag"
-      ],
+      "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.982303"
+      "fetched_at": "2026-05-09T02:46:31.632650"
     },
     {
       "rank": 6,
@@ -519,29 +370,8 @@
       "url": "https://github.com/LearningCircuit/local-deep-research",
       "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encrypted.",
       "language": "Python",
-      "topics": [
-        "academia",
-        "arxiv",
-        "brave",
-        "deep-research",
-        "local",
-        "local-llm",
-        "mistral",
-        "pubmed",
-        "research",
-        "research-tool",
-        "retrieval-augmented-generation",
-        "searxng",
-        "self-hosted",
-        "local-deep-research",
-        "home-automation",
-        "homeserver",
-        "ollama",
-        "anthropic",
-        "openai",
-        "encryption"
-      ],
-      "stars": 6753,
+      "topics": [],
+      "stars": 559,
       "stars_today": 559,
       "forks": 599,
       "author": "LearningCircuit",
@@ -551,9 +381,9 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T01:52:24.978446"
+      "fetched_at": "2026-05-09T02:46:31.628855"
     }
   ],
-  "insight_zh": "今日 AI 开源趋势中，agent 分类最为活跃，共 4 个项目（占比 50.0%）。 最热门项目为 Hmbown/DeepSeek-TUI，今日新增 3731 Star。",
+  "insight_zh": "今日GitHub AI趋势显示，DeepSeek-TUI以3731星领跑，成为终端编程代理热门项目。AI Agent类项目占比最高，达42.9%，反映智能体开发持续受关注。",
   "insight_en": ""
 }

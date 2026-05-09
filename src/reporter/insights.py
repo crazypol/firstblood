@@ -8,116 +8,118 @@ from the daily statistics.
 from config import settings
 from src.models import DailyReport, RepoData
 
+CATEGORY_LABELS = {
+    "llm": "大语言模型",
+    "agent": "AI Agent",
+    "rag": "RAG检索增强",
+    "mcp": "MCP协议",
+    "multimodal": "多模态",
+    "ai_tooling": "AI开发工具",
+    "ai_infra": "AI基础设施",
+    "ai_safety": "AI安全",
+    "ml_platform": "ML平台",
+    "reasoning": "推理",
+    "code_generation": "代码生成",
+}
+
 
 def _build_insight_prompt(report: DailyReport) -> str:
-    """Build prompt for daily insight generation."""
+    """Build a simple, reliable prompt for daily insight."""
     top_3 = report.top_repos[:3]
-    top_3_str = "\n".join(
-        f"- {r.name}: {r.description[:80]} (⭐+{r.stars_today}/天, {r.ai_category})"
-        for r in top_3
+    top_lines = "\n".join(
+        f"{i+1}. {r.name} (+{r.stars_today}⭐) - {r.description[:60]}"
+        for i, r in enumerate(top_3)
     )
 
-    cat_trends = "\n".join(
-        f"- {c.name}: {c.count} projects ({c.percentage}%)"
-        for c in report.categories[:6]
+    cat_lines = "\n".join(
+        f"- {CATEGORY_LABELS.get(c.name, c.name)}: {c.count}个 ({c.percentage}%)"
+        for c in report.categories[:5]
     )
 
-    new_entries = ""
+    new_lines = ""
     if report.new_entrants:
-        new_entries = "\n值得关注的新项目:\n" + "\n".join(
-            f"- {r.name}: {r.description[:80]}"
-            for r in report.new_entrants[:3]
+        new_lines = "首次上榜:\n" + "\n".join(
+            f"- {r.name}" for r in report.new_entrants[:3]
         )
 
-    return f"""You are an AI open-source trend analyst. Write a concise daily trend summary in Chinese.
+    return f"""Analyze today's GitHub AI trending data and write 2-3 short sentences in Chinese.
 
-Today's AI open-source data ({report.date}):
-- Total AI projects: {report.total_ai_repos}
+Data ({report.date}):
+AI项目总数: {report.total_ai_repos}
 
-Top projects:
-{top_3_str}
+热门项目:
+{top_lines}
 
-Category breakdown:
-{cat_trends}
-{new_entries}
+分类分布:
+{cat_lines}
 
-Write 2-3 paragraphs:
-1. What's hot today (top categories and why)
-2. Notable new projects or trends
-3. What developers should pay attention to
+{new_lines}
 
-Keep it under 200 characters. Be specific - mention actual project names and numbers."""
+Write in Chinese, be specific with names and numbers. Under 150 characters."""
 
 
 def _build_repo_summary_prompt(repo: RepoData) -> str:
-    """Build prompt for a single repo summary."""
-    topics_str = ", ".join(repo.topics) if repo.topics else "N/A"
-    return f"""Write a very concise 1-sentence Chinese summary of this GitHub repo:
-
-Name: {repo.name}
-Description: {repo.description[:200]}
-Topics: {topics_str}
-Language: {repo.language}
-Stars: {repo.stars:,}
-
-Explain what it does and why it matters in the AI ecosystem. Keep under 80 characters."""
+    """Build a simple prompt for repo summary."""
+    return f"""Describe this GitHub repo in ONE short Chinese sentence (under 60 chars):
+{repo.name}: {repo.description[:120]}"""
 
 
 def generate_insight(report: DailyReport) -> str:
-    """Generate daily trend insight using LLM.
-
-    Falls back to a template-based summary if LLM unavailable.
-    """
+    """Generate daily trend insight."""
     if not settings.anthropic_api_key and not settings.openai_api_key:
         return _generate_fallback_insight(report)
 
     try:
-        return _generate_llm_insight(report)
+        result = _generate_llm_insight(report)
+        if result and len(result) > 10:
+            return result
     except Exception:
-        return _generate_fallback_insight(report)
+        pass
+
+    return _generate_fallback_insight(report)
 
 
 def generate_repo_summary(repo: RepoData) -> str:
-    """Generate a short Chinese summary for a repo."""
+    """Generate a short summary for a repo."""
     if not settings.anthropic_api_key and not settings.openai_api_key:
         return ""
 
     try:
-        return _generate_llm_repo_summary(repo)
+        result = _generate_llm_repo_summary(repo)
+        if result and len(result) > 5:
+            return result
     except Exception:
-        return ""
+        pass
+
+    return ""
 
 
 def _generate_llm_insight(report: DailyReport) -> str:
-    """Generate insight using LLM."""
+    """Generate insight using LLM via OpenAI-compatible API."""
     if settings.llm_provider == "anthropic":
         import anthropic
         client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=500,
+            model=settings.llm_model or "claude-sonnet-4-20250514",
+            max_tokens=300,
             temperature=0.3,
-            messages=[
-                {"role": "user", "content": _build_insight_prompt(report)}
-            ],
+            messages=[{"role": "user", "content": _build_insight_prompt(report)}],
         )
         return response.content[0].text.strip()
 
-    else:
-        from openai import OpenAI
-        client = OpenAI(
-            api_key=settings.openai_api_key or settings.anthropic_api_key,
-            base_url=settings.openai_base_url or None,
-        )
-        response = client.chat.completions.create(
-            model="deepseek-chat",
-            max_tokens=500,
-            temperature=0.3,
-            messages=[
-                {"role": "user", "content": _build_insight_prompt(report)}
-            ],
-        )
-        return response.choices[0].message.content.strip()
+    from openai import OpenAI
+    client = OpenAI(
+        api_key=settings.openai_api_key or settings.anthropic_api_key,
+        base_url=settings.openai_base_url or None,
+    )
+    response = client.chat.completions.create(
+        model=settings.llm_model or "deepseek-chat",
+        max_tokens=300,
+        temperature=0.3,
+        messages=[{"role": "user", "content": _build_insight_prompt(report)}],
+    )
+    content = (response.choices[0].message.content or "").strip()
+    return content
 
 
 def _generate_llm_repo_summary(repo: RepoData) -> str:
@@ -126,30 +128,26 @@ def _generate_llm_repo_summary(repo: RepoData) -> str:
         import anthropic
         client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=150,
+            model=settings.llm_model or "claude-sonnet-4-20250514",
+            max_tokens=100,
             temperature=0.3,
-            messages=[
-                {"role": "user", "content": _build_repo_summary_prompt(repo)}
-            ],
+            messages=[{"role": "user", "content": _build_repo_summary_prompt(repo)}],
         )
         return response.content[0].text.strip()
 
-    else:
-        from openai import OpenAI
-        client = OpenAI(
-            api_key=settings.openai_api_key or settings.anthropic_api_key,
-            base_url=settings.openai_base_url or None,
-        )
-        response = client.chat.completions.create(
-            model="deepseek-chat",
-            max_tokens=150,
-            temperature=0.3,
-            messages=[
-                {"role": "user", "content": _build_repo_summary_prompt(repo)}
-            ],
-        )
-        return response.choices[0].message.content.strip()
+    from openai import OpenAI
+    client = OpenAI(
+        api_key=settings.openai_api_key or settings.anthropic_api_key,
+        base_url=settings.openai_base_url or None,
+    )
+    response = client.chat.completions.create(
+        model=settings.llm_model or "deepseek-chat",
+        max_tokens=100,
+        temperature=0.3,
+        messages=[{"role": "user", "content": _build_repo_summary_prompt(repo)}],
+    )
+    content = (response.choices[0].message.content or "").strip()
+    return content
 
 
 def _generate_fallback_insight(report: DailyReport) -> str:

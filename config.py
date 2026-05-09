@@ -14,6 +14,7 @@ class Settings(BaseSettings):
 
     # AI / LLM
     llm_provider: str = "anthropic"  # "anthropic" | "openai"
+    llm_model: str = "deepseek-chat"  # model name (mimo-v2.5-pro, deepseek-chat, etc.)
     anthropic_api_key: str = ""
     openai_api_key: str = ""
     openai_base_url: str = ""
