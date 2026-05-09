@@ -59,9 +59,11 @@ Write in Chinese, be specific with names and numbers. Under 150 characters."""
 
 
 def _build_repo_summary_prompt(repo: RepoData) -> str:
-    """Build a simple prompt for repo summary."""
-    return f"""Describe this GitHub repo in ONE short Chinese sentence (under 60 chars):
-{repo.name}: {repo.description[:120]}"""
+    """Build a prompt for detailed repo summary."""
+    desc = repo.description[:200] if repo.description else "暂无描述"
+    return f"""用2-3句纯文本介绍这个GitHub仓库（不要markdown格式）：它是什么项目？核心功能是什么？技术亮点是什么？
+
+{repo.name}: {desc}"""
 
 
 def generate_insight(report: DailyReport) -> str:
@@ -129,7 +131,7 @@ def _generate_llm_repo_summary(repo: RepoData) -> str:
         client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
         response = client.messages.create(
             model=settings.llm_model or "claude-sonnet-4-20250514",
-            max_tokens=100,
+            max_tokens=500,
             temperature=0.3,
             messages=[{"role": "user", "content": _build_repo_summary_prompt(repo)}],
         )
@@ -142,7 +144,7 @@ def _generate_llm_repo_summary(repo: RepoData) -> str:
     )
     response = client.chat.completions.create(
         model=settings.llm_model or "deepseek-chat",
-        max_tokens=100,
+        max_tokens=500,
         temperature=0.3,
         messages=[{"role": "user", "content": _build_repo_summary_prompt(repo)}],
     )

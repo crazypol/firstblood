@@ -7,14 +7,14 @@ export interface Props {
   color?: string;
 }
 
-const { label, value, trend, trendUp = true, color = 'text-primary-500' } = Astro.props;
+const { label, value, trend, trendUp = true, color = 'text-[var(--color-apple-blue)]' } = Astro.props;
 ---
 
-<div class="bg-white rounded-lg border border-neutral-200 shadow-sm p-5 transition-all duration-200 hover:shadow-md">
-  <p class="text-sm text-neutral-500 mb-1">{label}</p>
-  <p class={`text-3xl font-bold ${color}`}>{value}</p>
+<div class="apple-card px-5 py-[1.125rem]">
+  <p class="text-xs font-medium text-[var(--color-apple-text-secondary)] tracking-wide uppercase mb-0.5">{label}</p>
+  <p class={`text-[1.65rem] font-semibold tracking-tight ${color}`}>{value}</p>
   {trend && (
-    <p class={`text-sm mt-1 ${trendUp ? 'text-green-500' : 'text-red-500'}`}>
+    <p class={`text-xs mt-1 font-medium ${trendUp ? 'text-[var(--color-success)]' : 'text-[var(--color-error)]'}`}>
       {trendUp ? '↑' : '↓'} {trend}
     </p>
   )}

@@ -15,43 +15,46 @@ const currentDate = new Date().toISOString().split('T')[0];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} — AI Trend Daily</title>
+    <meta name="description" content="GitHub 热门 AI 相关项目每日趋势统计" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <meta name="description" content="GitHub 热门 AI 相关项目每日趋势统计" />
   </head>
-  <body class="min-h-screen">
+  <body>
     <!-- Nav -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <a href="/firstblood/" class="flex items-center gap-2 font-semibold text-lg text-neutral-900 no-underline">
-            <span class="text-primary-500 text-xl">◆</span>
+    <header class="apple-glass sticky top-0 z-50" style="border-bottom: 0.5px solid rgba(0,0,0,0.08);">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div class="flex items-center justify-between h-14">
+          <a href="/firstblood/" class="flex items-center gap-2 font-semibold text-base text-[var(--color-apple-text)] no-underline tracking-tight">
+            <span class="text-[var(--color-apple-blue)] text-xl leading-none">◆</span>
             <span>AI Trend Daily</span>
           </a>
-          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
-            <a href="/firstblood/" class="hover:text-primary-500 transition-colors no-underline">今日趋势</a>
-            <a href="/firstblood/category" class="hover:text-primary-500 transition-colors no-underline">分类浏览</a>
-            <a href="/firstblood/report" class="hover:text-primary-500 transition-colors no-underline">历史报告</a>
+          <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--color-apple-text-secondary)]">
+            <a href="/firstblood/" class="hover:text-[var(--color-apple-blue)] transition-colors duration-200 no-underline">今日趋势</a>
+            <a href="/firstblood/category" class="hover:text-[var(--color-apple-blue)] transition-colors duration-200 no-underline">分类浏览</a>
+            <a href="/firstblood/report" class="hover:text-[var(--color-apple-blue)] transition-colors duration-200 no-underline">历史报告</a>
           </nav>
           <div class="flex items-center gap-3">
-            <span class="text-sm text-neutral-400">{currentDate}</span>
+            <span class="text-sm text-[var(--color-apple-text-tertiary)] font-medium tabular-nums">{currentDate}</span>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Main -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <main class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-8 space-y-10">
       <slot />
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-neutral-200 mt-12 py-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-neutral-400">
-        <p>AI Trend Daily · 开源 · 数据来源于 GitHub Trending</p>
-        <p class="mt-1">
-          <a href="https://github.com/liuyang/firstblood" class="hover:text-primary-500 transition-colors no-underline">GitHub</a>
+    <footer class="mt-16 py-10">
+      <div class="apple-separator max-w-7xl mx-auto mb-8" style="width: calc(100% - 4rem);"></div>
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 text-center text-sm text-[var(--color-apple-text-tertiary)]">
+        <p>AI Trend Daily · 开源项目</p>
+        <p class="mt-1.5">
+          <a href="https://github.com/liuyang/firstblood" class="hover:text-[var(--color-apple-blue)] transition-colors duration-200 no-underline">GitHub</a>
+          <span class="mx-2">·</span>
+          数据来源于 GitHub Trending
         </p>
       </div>
     </footer>

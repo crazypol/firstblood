@@ -1,49 +1,160 @@
 @import "tailwindcss";
 
-/* ─── Design Tokens ─── */
+/* ─── Apple HIG Design Tokens ─── */
 @theme {
-  --color-primary-50: #eef2ff;
-  --color-primary-100: #e0e7ff;
-  --color-primary-200: #c7d2fe;
-  --color-primary-300: #a5b4fc;
-  --color-primary-400: #818cf8;
-  --color-primary-500: #6366f1;
-  --color-primary-600: #4f46e5;
-  --color-primary-700: #4338ca;
-  --color-primary-800: #3730a3;
-  --color-primary-900: #312e81;
+  --color-apple-bg: #f5f5f7;
+  --color-apple-card: #ffffff;
+  --color-apple-text: #1d1d1f;
+  --color-apple-text-secondary: #6e6e73;
+  --color-apple-text-tertiary: #86868b;
+  --color-apple-blue: #0071e3;
+  --color-apple-blue-light: #e8f0fe;
+  --color-apple-gray-fill: #e8e8ed;
+  --color-apple-separator: #d2d2d7;
 
-  --color-accent: #06b6d4;
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
+  --color-primary-50: #e8f0fe;
+  --color-primary-100: #d0e2fc;
+  --color-primary-200: #a1c4fa;
+  --color-primary-300: #72a6f7;
+  --color-primary-400: #4388f5;
+  --color-primary-500: #0071e3;
+  --color-primary-600: #005bb5;
+  --color-primary-700: #004487;
+  --color-primary-800: #002e59;
+  --color-primary-900: #00172c;
+
+  --color-success: #34c759;
+  --color-warning: #ff9f0a;
+  --color-error: #ff453a;
+  --color-accent: #0071e3;
 
   --color-cat-llm: #8b5cf6;
   --color-cat-agent: #06b6d4;
-  --color-cat-rag: #10b981;
-  --color-cat-mcp: #f59e0b;
-  --color-cat-multimodal: #ec4899;
-  --color-cat-tooling: #3b82f6;
-  --color-cat-infra: #64748b;
-  --color-cat-safety: #ef4444;
+  --color-cat-rag: #34c759;
+  --color-cat-mcp: #ff9f0a;
+  --color-cat-multimodal: #ff375f;
+  --color-cat-tooling: #0071e3;
+  --color-cat-infra: #8e8e93;
+  --color-cat-safety: #ff453a;
   --color-cat-ml: #14b8a6;
-  --color-cat-reasoning: #f97316;
+  --color-cat-reasoning: #ff9f0a;
   --color-cat-codegen: #8b5cf6;
 }
 
 /* ─── Base ─── */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--color-neutral-50);
-  color: var(--color-neutral-900);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text',
+    'Helvetica Neue', 'Inter', sans-serif;
+  background-color: var(--color-apple-bg);
+  color: var(--color-apple-text);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
+}
+
+/* ─── Apple-style subtle scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7c7cc;
+  border-radius: 3px;
 }
 
 /* ─── Animations ─── */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in {
-  animation: fadeInUp 0.3s ease forwards;
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-in {
+  animation: scaleIn 0.4s ease both;
+}
+
+/* ─── Apple card style ─── */
+.apple-card {
+  background-color: var(--color-apple-card);
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.apple-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  transform: translateY(-1px);
+}
+
+/* ─── Apple frosted glass ─── */
+.apple-glass {
+  background-color: rgba(255,255,255,0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* ─── Apple-style pill tag ─── */
+.apple-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ─── Apple-style pill active ─── */
+.apple-pill-active {
+  background-color: var(--color-apple-blue);
+  color: white;
+}
+
+.apple-pill-inactive {
+  background-color: transparent;
+  color: var(--color-apple-text-secondary);
+  border: 1px solid var(--color-apple-separator);
+}
+.apple-pill-inactive:hover {
+  background-color: var(--color-apple-gray-fill);
+  border-color: var(--color-apple-gray-fill);
+}
+
+/* ─── Progress bar ─── */
+.apple-progress {
+  height: 5px;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: var(--color-apple-gray-fill);
+}
+.apple-progress-bar {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* ─── Section heading ─── */
+.apple-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-apple-text);
+}
+.apple-section-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-apple-text-secondary);
+  margin-top: 0.125rem;
+}
+
+/* ─── Separator ─── */
+.apple-separator {
+  height: 1px;
+  background-color: var(--color-apple-separator);
 }
