@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+interface WeeklyRepo {
+  name: string;
+  url: string;
+  description: string;
+  language: string;
+  ai_category: string;
+  stars_7days: number;
+  recent_stars: number;
+  appear_count: number;
+}
+
+let weeklyRepos: WeeklyRepo[] = [];
+let dataDays = 0;
+let error: string | null = null;
+
+try {
+  const reportsDir = path.resolve('../data/reports');
+  if (!fs.existsSync(reportsDir)) throw new Error('Reports directory not found');
+
+  // Build list of last 7 dates
+  const today = new Date();
+  const dates: string[] = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    dates.push(d.toISOString().split('T')[0]);
+  }
+
+  // Aggregate stars_today per repo across 7 days
+  const repoMap = new Map<string, WeeklyRepo>();
+
+  for (const dateStr of dates) {
+    const filePath = path.join(reportsDir, `${dateStr}.json`);
+    if (!fs.existsSync(filePath)) continue;
+    dataDays++;
+
+    const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const repos = content.top_repos || [];
+
+    for (const repo of repos) {
+      const existing = repoMap.get(repo.name);
+      if (existing) {
+        existing.stars_7days += repo.stars_today || 0;
+        existing.appear_count += 1;
+        existing.recent_stars = repo.stars;
+        existing.description = repo.description || existing.description;
+        existing.language = repo.language || existing.language;
+      } else {
+        repoMap.set(repo.name, {
+          name: repo.name,
+          url: repo.url,
+          description: repo.description || '',
+          language: repo.language || '',
+          ai_category: repo.ai_category || '',
+          stars_7days: repo.stars_today || 0,
+          recent_stars: repo.stars || 0,
+          appear_count: 1,
+        });
+      }
+    }
+  }
+
+  weeklyRepos = Array.from(repoMap.values())
+    .sort((a, b) => b.stars_7days - a.stars_7days)
+    .slice(0, 50)
+    .map((repo, index) => ({ ...repo, rank: index + 1, isTop3: index + 1 < 4 }));
+} catch (e) {
+  error = e instanceof Error ? e.message : 'Unknown error';
+}
+
+const hasData = weeklyRepos.length > 0;
+const maxStars = hasData ? weeklyRepos[0].stars_7days : 1;
+---
+
+<Layout title="7日增长">
+  <section class="animate-fade-in">
+    <div class="flex items-baseline justify-between mb-6">
+      <div>
+        <h1 class="apple-section-title">7 日增长排行</h1>
+        <p class="apple-section-subtitle">过去一周 Star 增长总量 Top 50</p>
+      </div>
+      {hasData && (
+        <span class="apple-pill bg-[var(--color-apple-blue-light)] text-[var(--color-apple-blue)] font-semibold">{dataDays} 天数据</span>
+      )}
+    </div>
+
+    {error && (
+      <div class="apple-card p-10 text-center">
+        <p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">加载失败</p>
+        <p class="text-sm text-[var(--color-apple-text-tertiary)]">{error}</p>
+      </div>
+    )}
+
+    {!error && !hasData && (
+      <div class="apple-card p-10 text-center">
+        <p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">暂无数据</p>
+        <p class="text-sm text-[var(--color-apple-text-tertiary)]">需要至少 1 天的历史报告数据</p>
+      </div>
+    )}
+
+    {hasData && (
+      <div class="apple-card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--color-apple-separator)] bg-[var(--color-apple-gray-fill)]/50">
+                <th class="text-left py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase w-12">#</th>
+                <th class="text-left py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">项目</th>
+                <th class="text-right py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">7 日增长</th>
+                <th class="text-right py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">总 Star</th>
+                <th class="text-center py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">出现天数</th>
+                <th class="text-right py-3 px-4 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase hidden md:table-cell">分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              {weeklyRepos.map((repo) => {
+                const barWidth = Math.max(4, (repo.stars_7days / maxStars) * 100);
+                const medal = repo.rank === 1 ? '🥇' : repo.rank === 2 ? '🥈' : repo.rank === 3 ? '🥉' : null;
+                const rankLabel = medal || `#${repo.rank}`;
+                return (
+                  <tr class="border-b border-[var(--color-apple-separator)]/50 last:border-b-0 hover:bg-[var(--color-apple-gray-fill)]/40 transition-colors">
+                    <td class="py-3 px-4">
+                      <span class={`tabular-nums font-bold text-sm ${repo.isTop3 ? 'text-[var(--color-apple-blue)]' : 'text-[var(--color-apple-text-tertiary)]'}`}>
+                        {rankLabel}
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 min-w-0 max-w-xs">
+                      <a href={repo.url} target="_blank" class="text-[var(--color-apple-blue)] hover:underline no-underline font-medium text-sm block truncate">
+                        {repo.name}
+                      </a>
+                      {repo.description && (
+                        <p class="text-xs text-[var(--color-apple-text-tertiary)] truncate mt-0.5 leading-relaxed">{repo.description}</p>
+                      )}
+                    </td>
+                    <td class="py-3 px-4 text-right">
+                      <div class="flex items-center justify-end gap-3">
+                        <span class="text-sm font-bold text-[var(--color-success)] tabular-nums">+{repo.stars_7days.toLocaleString()}</span>
+                        <div class="w-16 h-1.5 bg-[var(--color-apple-gray-fill)] rounded-full overflow-hidden hidden sm:block">
+                          <div class="h-full rounded-full bg-gradient-to-r from-[#34c759] to-[#30d158]" style={`width: ${barWidth}%`}></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-right text-sm text-[var(--color-apple-text)] font-semibold tabular-nums">
+                      {repo.recent_stars.toLocaleString()}
+                    </td>
+                    <td class="py-3 px-4 text-center">
+                      <span class={`apple-pill text-xs font-semibold ${
+                        repo.appear_count >= 5
+                          ? 'bg-[var(--color-apple-blue-light)] text-[var(--color-apple-blue)]'
+                          : repo.appear_count >= 3
+                            ? 'bg-[#fef3c7] text-[#b26200]'
+                            : 'bg-[var(--color-apple-gray-fill)] text-[var(--color-apple-text-secondary)]'
+                      }`}>
+                        {repo.appear_count}/7
+                      </span>
+                    </td>
+                    <td class="py-3 px-4 text-right hidden md:table-cell">
+                      <span class="apple-pill bg-[var(--color-apple-gray-fill)] text-[var(--color-apple-text-secondary)] text-xs">
+                        {repo.ai_category || '-'}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+  </section>
+</Layout>
