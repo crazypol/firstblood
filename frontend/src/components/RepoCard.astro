@@ -49,7 +49,7 @@ const style = catStyle[repo.ai_category] || 'bg-[#f0f0f2] text-[#636366]';
       </div>
 
       <!-- Description -->
-      <p class="text-sm text-[var(--color-apple-text-secondary)] leading-relaxed mb-3">{(repo.summary_zh || repo.description)?.slice(0, 120)}</p>
+      <p class="text-sm text-[var(--color-apple-text-secondary)] leading-relaxed mb-3">{repo.summary_zh || repo.description}</p>
 
       <!-- Tags -->
       <div class="flex flex-wrap items-center gap-1.5 mb-3">

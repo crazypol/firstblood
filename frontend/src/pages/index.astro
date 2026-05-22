@@ -29,7 +29,7 @@ const insight = report?.insight_zh || '';
     <div class="flex items-baseline justify-between mb-6">
       <div>
         <h1 class="apple-section-title">今日概览</h1>
-        <p class="apple-section-subtitle">GitHub AI 项目每日趋势</p>
+        <p class="apple-section-subtitle">GitHub AI 项目每日趋势分析</p>
       </div>
       {hasData && (
         <span class="apple-pill bg-[var(--color-apple-blue-light)] text-[var(--color-apple-blue)] font-semibold">{report.date}</span>
@@ -79,7 +79,7 @@ const insight = report?.insight_zh || '';
   <!-- Top 10 -->
   {topRepos.length > 0 && (
     <section class="animate-fade-in">
-      <h2 class="apple-section-title mb-1">热门 Top 10</h2>
+      <h2 class="apple-section-title mb-1">热门排行</h2>
       <p class="apple-section-subtitle mb-5">今日涨幅最高的 AI 开源项目</p>
       <div class="space-y-3">
         {topRepos.map((repo: any) => <RepoCard repo={repo} />)}
@@ -95,12 +95,12 @@ const insight = report?.insight_zh || '';
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         {newEntrants.slice(0, 6).map((repo: any) => (
           <div class="apple-card px-5 py-4 flex items-center gap-3.5">
-            <span class="apple-pill bg-[var(--color-apple-blue)] text-white text-[0.625rem] font-semibold shrink-0 px-2.5">NEW</span>
+            <span class="apple-pill bg-[var(--color-apple-blue)] text-white text-[0.625rem] font-semibold shrink-0 px-2.5">新</span>
             <div class="min-w-0 flex-1">
               <a href={repo.url} target="_blank" class="text-sm font-semibold text-[var(--color-apple-text)] hover:text-[var(--color-apple-blue)] transition-colors duration-200 truncate block no-underline">
                 {repo.name}
               </a>
-              <p class="text-xs text-[var(--color-apple-text-tertiary)] truncate mt-0.5">{(repo.summary_zh || repo.description)?.slice(0, 60)}</p>
+              <p class="text-xs text-[var(--color-apple-text-tertiary)] truncate mt-0.5">{repo.summary_zh || repo.description}</p>
             </div>
             <span class="text-sm font-semibold text-[var(--color-success)] shrink-0 tabular-nums">+{repo.stars_today}</span>
           </div>

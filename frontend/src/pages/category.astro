@@ -25,14 +25,14 @@ const filteredRepos = activeCat ? allRepos.filter((r: any) => r.ai_category === 
 
     <!-- Pills -->
     <div class="flex flex-wrap gap-2 mb-6">
-      <a href="/firstblood/category"
+      <a href="/category"
         class={`apple-pill text-sm font-medium no-underline transition-all duration-200 ${
           !activeCat ? 'apple-pill-active' : 'apple-pill-inactive'
         }`}>全部</a>
       {categories.map((cat: any) => {
         const isActive = activeCat === cat.name;
         return (
-          <a href={`/firstblood/category?cat=${cat.name}`}
+          <a href={`/category?cat=${cat.name}`}
             class={`apple-pill text-sm font-medium no-underline transition-all duration-200 ${
               isActive ? 'apple-pill-active' : 'apple-pill-inactive'
             }`}>

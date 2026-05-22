@@ -10,17 +10,7 @@ try {
     reports = fs.readdirSync(reportsDir).filter(f => f.endsWith('.json') && f !== 'latest.json').sort().reverse();
   }
 } catch {}
-
-const selectedDate = Astro.url.searchParams.get('date') || '';
-let report: any = null;
-if (selectedDate) {
-  try { report = JSON.parse(fs.readFileSync(path.join(reportsDir, `${selectedDate}.json`), 'utf-8')); } catch {}
-}
-if (!report) {
-  try { report = JSON.parse(fs.readFileSync(path.join(reportsDir, 'latest.json'), 'utf-8')); } catch {}
-}
-
-const hasData = report && report.total_repos > 0;
+const reportsList = reports.map(f => f.replace('.json', ''));
 ---
 
 <Layout title="历史报告">
@@ -33,112 +23,158 @@ const hasData = report && report.total_repos > 0;
       <div class="lg:col-span-1">
         <div class="apple-card p-4">
           <h3 class="text-xs font-semibold text-[var(--color-apple-text-secondary)] tracking-wide uppercase mb-3">报告列表</h3>
-          {reports.length > 0 ? (
-            <ul class="space-y-0.5">
-              {reports.map(f => {
-                const d = f.replace('.json', '');
-                const active = d === (selectedDate || report?.date);
-                return (
-                  <li><a href={`/firstblood/report?date=${d}`}
-                    class={`block px-3 py-2 text-sm rounded-lg transition-all duration-200 no-underline ${
-                      active ? 'bg-[var(--color-apple-blue-light)] text-[var(--color-apple-blue)] font-medium' : 'text-[var(--color-apple-text-secondary)] hover:bg-[var(--color-apple-gray-fill)]'
-                    }`}>{d}</a></li>
-                );
-              })}
+          {reportsList.length > 0 ? (
+            <ul class="space-y-0.5" id="report-list">
+              {reportsList.map(d => (
+                <li><a href={`/report?date=${d}`}
+                  class="report-link block px-3 py-2 text-sm rounded-lg transition-all duration-200 no-underline text-[var(--color-apple-text-secondary)] hover:bg-[var(--color-apple-gray-fill)]"
+                  data-date={d}>{d}</a></li>
+              ))}
             </ul>
           ) : <p class="text-sm text-[var(--color-apple-text-tertiary)]">暂无历史报告</p>}
         </div>
       </div>
 
       <!-- Content -->
-      <div class="lg:col-span-3">
-        {hasData ? (
-          <div class="apple-card p-6">
-            <div class="flex items-center justify-between mb-6">
-              <div>
-                <h2 class="text-lg font-semibold text-[var(--color-apple-text)] tracking-tight">每日趋势报告</h2>
-                <p class="text-sm text-[var(--color-apple-text-secondary)] mt-0.5">{report.date}</p>
-              </div>
-              <a href={`/firstblood/data/reports/${report.date}.json`} class="inline-flex items-center px-4 py-2 text-sm font-medium text-[var(--color-apple-blue)] bg-[var(--color-apple-blue-light)] rounded-lg hover:bg-[#d0e2fc] transition-colors duration-200 no-underline" download>
-                下载 JSON
-              </a>
-            </div>
-
-            {report.insight_zh && (
-              <div class="bg-[var(--color-apple-blue-light)] rounded-2xl px-5 py-4 mb-6">
-                <div class="flex items-start gap-3">
-                  <span class="text-lg leading-none mt-0.5">🤖</span>
-                  <p class="text-sm text-[var(--color-apple-text)] leading-relaxed">
-                    <span class="font-semibold text-[var(--color-apple-blue)]">执行摘要：</span>{report.insight_zh}
-                  </p>
-                </div>
-              </div>
-            )}
-
-            <!-- Stats Table -->
-            <div class="mb-6">
-              <h3 class="text-sm font-semibold text-[var(--color-apple-text)] mb-3">统计数据</h3>
-              <div class="apple-card bg-[var(--color-apple-bg)] overflow-hidden">
-                <table class="w-full text-sm">
-                  <tbody>
-                    <tr class="border-b border-[var(--color-apple-separator)]">
-                      <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">收录项目总数</td>
-                      <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">{report.total_repos}</td>
-                    </tr>
-                    <tr class="border-b border-[var(--color-apple-separator)]">
-                      <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">AI 相关项目</td>
-                      <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">{report.total_ai_repos}</td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">分类数</td>
-                      <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">{report.categories?.length || 0}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {report.top_repos?.length > 0 && (
-              <div>
-                <h3 class="text-sm font-semibold text-[var(--color-apple-text)] mb-3">完整项目列表</h3>
-                <div class="overflow-x-auto rounded-xl">
-                  <table class="w-full text-sm">
-                    <thead>
-                      <tr class="border-b border-[var(--color-apple-separator)]">
-                        <th class="text-left py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">#</th>
-                        <th class="text-left py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">名称</th>
-                        <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">Stars</th>
-                        <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">今日</th>
-                        <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">分类</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {report.top_repos.map((repo: any) => (
-                        <tr class="border-b border-[var(--color-apple-separator)]/50 last:border-b-0 hover:bg-[var(--color-apple-gray-fill)]/50 transition-colors">
-                          <td class="py-2.5 px-3 text-[var(--color-apple-text-tertiary)] tabular-nums">#{repo.rank}</td>
-                          <td class="py-2.5 px-3">
-                            <a href={repo.url} target="_blank" class="text-[var(--color-apple-blue)] hover:underline no-underline font-medium">{repo.name}</a>
-                          </td>
-                          <td class="py-2.5 px-3 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">{repo.stars?.toLocaleString()}</td>
-                          <td class="py-2.5 px-3 text-right text-[var(--color-success)] font-semibold tabular-nums">+{repo.stars_today}</td>
-                          <td class="py-2.5 px-3 text-right">
-                            <span class="apple-pill bg-[var(--color-apple-gray-fill)] text-[var(--color-apple-text-secondary)]">{repo.ai_category}</span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
-          </div>
-        ) : (
-          <div class="apple-card p-12 text-center">
-            <p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">暂无数据</p>
-            <p class="text-sm text-[var(--color-apple-text-tertiary)]">运行流水线获取数据后即可查看报告</p>
-          </div>
-        )}
+      <div class="lg:col-span-3" id="report-content">
+        <div class="apple-card p-12 text-center" id="report-loading">
+          <p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">加载中...</p>
+        </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<script>
+  const baseUrl = '';
+
+  function getDateFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('date') || '';
+  }
+
+  async function loadReport(date) {
+    const container = document.getElementById('report-content');
+    container.innerHTML = `<div class="apple-card p-12 text-center"><p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">加载中...</p></div>`;
+
+    // Update active state in sidebar
+    document.querySelectorAll('.report-link').forEach(el => {
+      el.classList.remove('bg-[var(--color-apple-blue-light)]', 'text-[var(--color-apple-blue)]', 'font-medium');
+      el.classList.add('text-[var(--color-apple-text-secondary)]', 'hover:bg-[var(--color-apple-gray-fill)]');
+    });
+    const activeLink = document.querySelector(`.report-link[data-date="${date}"]`);
+    if (activeLink) {
+      activeLink.classList.add('bg-[var(--color-apple-blue-light)]', 'text-[var(--color-apple-blue)]', 'font-medium');
+      activeLink.classList.remove('text-[var(--color-apple-text-secondary)]', 'hover:bg-[var(--color-apple-gray-fill)]');
+    }
+
+    const filename = date || 'latest';
+    try {
+      const resp = await fetch(`${baseUrl}/data/reports/${filename}.json`);
+      if (!resp.ok) throw new Error('Not found');
+      const report = await resp.json();
+
+      container.innerHTML = `
+        <div class="apple-card p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-lg font-semibold text-[var(--color-apple-text)] tracking-tight">每日趋势报告</h2>
+              <p class="text-sm text-[var(--color-apple-text-secondary)] mt-0.5">${report.date}</p>
+            </div>
+            <a href="${baseUrl}/data/reports/${report.date}.json" class="inline-flex items-center px-4 py-2 text-sm font-medium text-[var(--color-apple-blue)] bg-[var(--color-apple-blue-light)] rounded-lg hover:bg-[#d0e2fc] transition-colors duration-200 no-underline" download>
+              下载 JSON 数据
+            </a>
+          </div>
+          ${report.insight_zh ? `
+          <div class="bg-[var(--color-apple-blue-light)] rounded-2xl px-5 py-4 mb-6">
+            <div class="flex items-start gap-3">
+              <span class="text-lg leading-none mt-0.5">🤖</span>
+              <p class="text-sm text-[var(--color-apple-text)] leading-relaxed">
+                <span class="font-semibold text-[var(--color-apple-blue)]">执行摘要：</span>${report.insight_zh}
+              </p>
+            </div>
+          </div>` : ''}
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-[var(--color-apple-text)] mb-3">统计数据</h3>
+            <div class="apple-card bg-[var(--color-apple-bg)] overflow-hidden">
+              <table class="w-full text-sm">
+                <tbody>
+                  <tr class="border-b border-[var(--color-apple-separator)]">
+                    <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">收录项目总数</td>
+                    <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">${report.total_repos}</td>
+                  </tr>
+                  <tr class="border-b border-[var(--color-apple-separator)]">
+                    <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">AI 相关项目</td>
+                    <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">${report.total_ai_repos}</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 text-[var(--color-apple-text-secondary)]">分类数</td>
+                    <td class="py-3 px-4 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">${(report.categories || []).length}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          ${(report.top_repos || []).length > 0 ? `
+          <div>
+            <h3 class="text-sm font-semibold text-[var(--color-apple-text)] mb-3">完整项目列表</h3>
+            <div class="overflow-x-auto rounded-xl">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b border-[var(--color-apple-separator)]">
+                    <th class="text-left py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">#</th>
+                    <th class="text-left py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">名称</th>
+                    <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">星标</th>
+                    <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">今日</th>
+                    <th class="text-right py-2.5 px-3 font-medium text-[var(--color-apple-text-tertiary)] text-xs tracking-wide uppercase">分类</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${report.top_repos.map(repo => `
+                    <tr class="border-b border-[var(--color-apple-separator)]/50 last:border-b-0 hover:bg-[var(--color-apple-gray-fill)]/50 transition-colors">
+                      <td class="py-2.5 px-3 text-[var(--color-apple-text-tertiary)] tabular-nums">#${repo.rank}</td>
+                      <td class="py-2.5 px-3">
+                        <a href="${repo.url}" target="_blank" class="text-[var(--color-apple-blue)] hover:underline no-underline font-medium">${repo.name}</a>
+                      </td>
+                      <td class="py-2.5 px-3 text-right font-semibold text-[var(--color-apple-text)] tabular-nums">${(repo.stars || 0).toLocaleString()}</td>
+                      <td class="py-2.5 px-3 text-right text-[var(--color-success)] font-semibold tabular-nums">+${repo.stars_today}</td>
+                      <td class="py-2.5 px-3 text-right">
+                        <span class="apple-pill bg-[var(--color-apple-gray-fill)] text-[var(--color-apple-text-secondary)]">${repo.ai_category}</span>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>` : ''}
+        </div>
+      `;
+    } catch {
+      container.innerHTML = `
+        <div class="apple-card p-12 text-center">
+          <p class="text-lg font-semibold text-[var(--color-apple-text-secondary)] mb-2">暂无数据</p>
+          <p class="text-sm text-[var(--color-apple-text-tertiary)]">运行流水线获取数据后即可查看报告</p>
+        </div>
+      `;
+    }
+  }
+
+  // Load report on page load
+  const date = getDateFromUrl();
+  loadReport(date);
+
+  // Intercept sidebar clicks for SPA-like navigation
+  document.addEventListener('click', e => {
+    const link = e.target.closest('.report-link');
+    if (!link) return;
+    e.preventDefault();
+    const date = link.dataset.date;
+    history.pushState({}, '', `${baseUrl}/report?date=${date}`);
+    loadReport(date);
+  });
+
+  // Handle browser back/forward
+  window.addEventListener('popstate', () => {
+    loadReport(getDateFromUrl());
+  });
+</script>

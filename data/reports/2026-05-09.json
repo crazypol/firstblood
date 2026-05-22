@@ -1,6 +1,6 @@
 {
   "date": "2026-05-09",
-  "generated_at": "2026-05-09T02:46:31.640050",
+  "generated_at": "2026-05-09T07:23:20.548054",
   "total_repos": 12,
   "total_ai_repos": 7,
   "categories": [
@@ -62,15 +62,15 @@
       "topics": [],
       "stars": 3731,
       "stars_today": 3731,
-      "forks": 1720,
+      "forks": 1775,
       "author": "Hmbown",
       "author_url": "https://github.com/Hmbown",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是一个为DeepSeek模型设计的终端编码代理工具，它允许开发者在命令行界面中直接与DeepSeek模型交互来完成编码任务。核心功能是提供一个轻量级的终端用户界面，支持代码生成、解释和调试等编程辅助操作。技术亮点在于其针对终端环境的优化设计，实现了与DeepSeek模型的高效集成，为习惯命令行工作流的开发者提供了便捷的AI编程助手。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.617739"
+      "fetched_at": "2026-05-09T07:23:20.524549"
     },
     {
       "rank": 2,
@@ -81,15 +81,15 @@
       "topics": [],
       "stars": 3660,
       "stars_today": 3660,
-      "forks": 1929,
+      "forks": 2020,
       "author": "anthropics",
       "author_url": "https://github.com/anthropics",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是Anthropic公司官方提供的金融服务行业AI应用资源库，主要展示如何将Claude大语言模型应用于银行、保险、投资等金融场景。核心功能包括风险评估、合规审查、客户服务自动化等金融业务的AI解决方案示例。技术亮点在于针对金融行业的专业需求对Claude进行了场景化适配，提供了从文档分析到智能决策的端到端工作流参考实现。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.614158"
+      "fetched_at": "2026-05-09T07:23:20.520489"
     },
     {
       "rank": 3,
@@ -100,17 +100,17 @@
       "topics": [],
       "stars": 1893,
       "stars_today": 1893,
-      "forks": 4039,
+      "forks": 4090,
       "author": "addyosmani",
       "author_url": "https://github.com/addyosmani",
       "ai_category": "agent",
       "ai_subcategories": [
         "ai_tooling"
       ],
-      "summary_zh": "",
+      "summary_zh": "这个仓库是一个为AI编码代理提供生产级工程技能的资源库，旨在帮助AI代理像资深工程师一样理解和执行复杂的软件开发任务。它的核心功能是提供一系列经过验证的最佳实践、设计模式和实用技巧，覆盖代码质量、测试、部署等关键环节。技术亮点在于将人类工程师的隐性知识系统化，让AI代理能够遵循真实世界的工程标准，而不仅仅是生成代码片段。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.615978"
+      "fetched_at": "2026-05-09T07:23:20.522635"
     },
     {
       "rank": 4,
@@ -121,15 +121,15 @@
       "topics": [],
       "stars": 1052,
       "stars_today": 1052,
-      "forks": 1076,
+      "forks": 1100,
       "author": "decolua",
       "author_url": "https://github.com/decolua",
       "ai_category": "ai_tooling",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "9router是一个AI编码代理的路由网关项目，它能将Claude Code、Cursor、Copilot等主流AI编码工具连接到40多个免费的Claude/GPT/Gemini提供商，让用户无需付费即可使用这些AI编码助手。核心功能是智能路由和自动回退机制，当某个提供商不可用时会自动切换到其他可用源，确保服务持续可用。技术亮点包括RTK压缩技术可减少约40%的token消耗，以及统一的API适配层让不同工具都能无缝对接各种免费模型服务。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.621418"
+      "fetched_at": "2026-05-09T07:23:20.527964"
     },
     {
       "rank": 5,
@@ -140,15 +140,15 @@
       "topics": [],
       "stars": 667,
       "stars_today": 667,
-      "forks": 5437,
+      "forks": 5479,
       "author": "datawhalechina",
       "author_url": "https://github.com/datawhalechina",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是Datawhale社区推出的一份AI智能体入门教程，面向零基础学习者系统讲解智能体（Agent）的原理与实践。核心功能是通过循序渐进的章节帮助读者从理论到动手实现，掌握智能体的构建方法。技术亮点在于内容由浅入深、配套代码实践，适合想要快速上手大模型Agent开发的初学者。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.632650"
+      "fetched_at": "2026-05-09T07:23:20.539362"
     },
     {
       "rank": 6,
@@ -159,15 +159,15 @@
       "topics": [],
       "stars": 559,
       "stars_today": 559,
-      "forks": 599,
+      "forks": 609,
       "author": "LearningCircuit",
       "author_url": "https://github.com/LearningCircuit",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是一个本地化深度研究工具，支持多种本地和云端大语言模型，能通过十余种搜索引擎（包括学术数据库和私人文档）进行高效信息检索与分析。其技术亮点在于实现了高准确率（如在SimpleQA上达95%）、全面的模型兼容性以及端到端的本地加密处理。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.628855"
+      "fetched_at": "2026-05-09T07:23:20.535413"
     },
     {
       "rank": 7,
@@ -178,15 +178,15 @@
       "topics": [],
       "stars": 526,
       "stars_today": 526,
-      "forks": 250,
+      "forks": 265,
       "author": "CloakHQ",
       "author_url": "https://github.com/CloakHQ",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "CloakBrowser是一个基于Chromium的隐身浏览器项目，专门用于自动化爬虫和浏览器自动化场景，能够绕过各种反机器人检测系统。它的核心功能是作为Playwright的直接替代品，让用户可以无缝替换现有自动化脚本中的浏览器引擎。技术亮点在于采用了源码级别的指纹补丁，从底层修改Chromium源码来伪装浏览器指纹特征，目前已通过全部30项主流反机器人检测测试。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.623196"
+      "fetched_at": "2026-05-09T07:23:20.529692"
     },
     {
       "rank": 8,
@@ -197,15 +197,15 @@
       "topics": [],
       "stars": 379,
       "stars_today": 379,
-      "forks": 268,
+      "forks": 269,
       "author": "z-lab",
       "author_url": "https://github.com/z-lab",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "DFlash是一个结合扩散模型与推测解码技术的大语言模型推理加速项目，核心功能是通过块状扩散生成候选token序列来提升解码速度，其技术亮点在于将扩散模型的并行生成能力与推测解码的验证机制高效融合，实现了比传统推测解码更快的推理效率。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.619420"
+      "fetched_at": "2026-05-09T07:23:20.526239"
     },
     {
       "rank": 9,
@@ -216,15 +216,15 @@
       "topics": [],
       "stars": 202,
       "stars_today": 202,
-      "forks": 2442,
+      "forks": 2455,
       "author": "HKUDS",
       "author_url": "https://github.com/HKUDS",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "AI-Trader是由香港大学数据科学实验室（HKUDS）开发的一个100%全自动化的AI交易系统，基于Agent原生架构设计。核心功能是利用AI智能体自主完成股票或加密货币的交易决策和执行，无需人工干预。技术亮点在于采用Agent-Native架构，将大语言模型与交易策略深度整合，实现从市场分析、信号生成到订单执行的端到端自动化流程。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.626809"
+      "fetched_at": "2026-05-09T07:23:20.533149"
     },
     {
       "rank": 10,
@@ -235,15 +235,15 @@
       "topics": [],
       "stars": 125,
       "stars_today": 125,
-      "forks": 15115,
+      "forks": 15117,
       "author": "lobehub",
       "author_url": "https://github.com/lobehub",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "LobeHub是一个面向工作与生活的AI代理协作平台，让用户能够创建、管理和使用多个智能代理来协同完成任务。它的核心功能是提供多代理协作环境，使不同AI代理可以像团队成员一样相互配合。技术亮点在于其先进的代理工具化设计，让非技术用户也能轻松构建和部署复杂的AI工作流。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.630917"
+      "fetched_at": "2026-05-09T07:23:20.537526"
     },
     {
       "rank": 11,
@@ -254,7 +254,7 @@
       "topics": [],
       "stars": 118,
       "stars_today": 118,
-      "forks": 94,
+      "forks": 95,
       "author": "flutter",
       "author_url": "https://github.com/flutter",
       "ai_category": "uncategorized",
@@ -262,7 +262,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.634415"
+      "fetched_at": "2026-05-09T07:23:20.541140"
     },
     {
       "rank": 12,
@@ -273,7 +273,7 @@
       "topics": [],
       "stars": 58,
       "stars_today": 58,
-      "forks": 306,
+      "forks": 309,
       "author": "awslabs",
       "author_url": "https://github.com/awslabs",
       "ai_category": "ai_tooling",
@@ -281,7 +281,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.625025"
+      "fetched_at": "2026-05-09T07:23:20.531415"
     }
   ],
   "new_entrants": [],
@@ -295,15 +295,15 @@
       "topics": [],
       "stars": 3731,
       "stars_today": 3731,
-      "forks": 1720,
+      "forks": 1775,
       "author": "Hmbown",
       "author_url": "https://github.com/Hmbown",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是一个为DeepSeek模型设计的终端编码代理工具，它允许开发者在命令行界面中直接与DeepSeek模型交互来完成编码任务。核心功能是提供一个轻量级的终端用户界面，支持代码生成、解释和调试等编程辅助操作。技术亮点在于其针对终端环境的优化设计，实现了与DeepSeek模型的高效集成，为习惯命令行工作流的开发者提供了便捷的AI编程助手。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.617739"
+      "fetched_at": "2026-05-09T07:23:20.524549"
     },
     {
       "rank": 3,
@@ -314,17 +314,17 @@
       "topics": [],
       "stars": 1893,
       "stars_today": 1893,
-      "forks": 4039,
+      "forks": 4090,
       "author": "addyosmani",
       "author_url": "https://github.com/addyosmani",
       "ai_category": "agent",
       "ai_subcategories": [
         "ai_tooling"
       ],
-      "summary_zh": "",
+      "summary_zh": "这个仓库是一个为AI编码代理提供生产级工程技能的资源库，旨在帮助AI代理像资深工程师一样理解和执行复杂的软件开发任务。它的核心功能是提供一系列经过验证的最佳实践、设计模式和实用技巧，覆盖代码质量、测试、部署等关键环节。技术亮点在于将人类工程师的隐性知识系统化，让AI代理能够遵循真实世界的工程标准，而不仅仅是生成代码片段。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.615978"
+      "fetched_at": "2026-05-09T07:23:20.522635"
     },
     {
       "rank": 4,
@@ -335,15 +335,15 @@
       "topics": [],
       "stars": 1052,
       "stars_today": 1052,
-      "forks": 1076,
+      "forks": 1100,
       "author": "decolua",
       "author_url": "https://github.com/decolua",
       "ai_category": "ai_tooling",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "9router是一个AI编码代理的路由网关项目，它能将Claude Code、Cursor、Copilot等主流AI编码工具连接到40多个免费的Claude/GPT/Gemini提供商，让用户无需付费即可使用这些AI编码助手。核心功能是智能路由和自动回退机制，当某个提供商不可用时会自动切换到其他可用源，确保服务持续可用。技术亮点包括RTK压缩技术可减少约40%的token消耗，以及统一的API适配层让不同工具都能无缝对接各种免费模型服务。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.621418"
+      "fetched_at": "2026-05-09T07:23:20.527964"
     },
     {
       "rank": 5,
@@ -354,15 +354,15 @@
       "topics": [],
       "stars": 667,
       "stars_today": 667,
-      "forks": 5437,
+      "forks": 5479,
       "author": "datawhalechina",
       "author_url": "https://github.com/datawhalechina",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是Datawhale社区推出的一份AI智能体入门教程，面向零基础学习者系统讲解智能体（Agent）的原理与实践。核心功能是通过循序渐进的章节帮助读者从理论到动手实现，掌握智能体的构建方法。技术亮点在于内容由浅入深、配套代码实践，适合想要快速上手大模型Agent开发的初学者。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.632650"
+      "fetched_at": "2026-05-09T07:23:20.539362"
     },
     {
       "rank": 6,
@@ -373,17 +373,17 @@
       "topics": [],
       "stars": 559,
       "stars_today": 559,
-      "forks": 599,
+      "forks": 609,
       "author": "LearningCircuit",
       "author_url": "https://github.com/LearningCircuit",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "",
+      "summary_zh": "这是一个本地化深度研究工具，支持多种本地和云端大语言模型，能通过十余种搜索引擎（包括学术数据库和私人文档）进行高效信息检索与分析。其技术亮点在于实现了高准确率（如在SimpleQA上达95%）、全面的模型兼容性以及端到端的本地加密处理。",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-09T02:46:31.628855"
+      "fetched_at": "2026-05-09T07:23:20.535413"
     }
   ],
-  "insight_zh": "今日GitHub AI趋势显示，DeepSeek-TUI以3731星领跑，成为终端编程代理热门项目。AI Agent类项目占比最高，达42.9%，反映智能体开发持续受关注。",
+  "insight_zh": "今日GitHub AI趋势显示，DeepSeek终端编码助手DeepSeek-TUI以3731星领跑。AI Agent类项目占比最高，达42.9%，反映智能体开发正成为热点。",
   "insight_en": ""
 }
