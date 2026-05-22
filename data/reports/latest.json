@@ -1,28 +1,23 @@
 {
   "date": "2026-05-22",
-  "generated_at": "2026-05-22T03:14:32.478428",
+  "generated_at": "2026-05-22T04:45:51.838933",
   "total_repos": 19,
-  "total_ai_repos": 9,
+  "total_ai_repos": 11,
   "categories": [
     {
-      "name": "llm",
-      "count": 3,
-      "percentage": 33.3
-    },
-    {
       "name": "agent",
-      "count": 3,
-      "percentage": 33.3
-    },
-    {
-      "name": "ai_tooling",
-      "count": 2,
-      "percentage": 22.2
+      "count": 8,
+      "percentage": 72.7
     },
     {
       "name": "mcp",
+      "count": 2,
+      "percentage": 18.2
+    },
+    {
+      "name": "llm",
       "count": 1,
-      "percentage": 11.1
+      "percentage": 9.1
     }
   ],
   "languages": [
@@ -65,17 +60,17 @@
       "description": "Pre-indexed code knowledge graph for Claude Code, Codex, Cursor, and OpenCode — fewer tokens, fewer tool calls, 100% local",
       "language": "TypeScript",
       "topics": [],
-      "stars": 4294,
+      "stars": 14220,
       "stars_today": 4294,
-      "forks": 793,
+      "forks": 805,
       "author": "colbymchenry",
       "author_url": "https://github.com/colbymchenry",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "CodeGraph是一个为AI编程助手（如Claude Code、Cursor等）设计的预索引代码知识图谱项目，它通过将代码库提前转化为结构化的图数据来提升AI理解代码的效率。核心功能是让AI助手能更快速、更精准地定位和解析代码关系，减少每次查询时的工具调用和token消耗。技术亮点在于100%本地化处理，无需联网即可构建代码索引，同时通过预计算优化了AI工具对大型代码库的访问性能。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.440536"
+      "fetched_at": "2026-05-22T04:45:43.823070"
     },
     {
       "rank": 2,
@@ -84,17 +79,17 @@
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "language": "",
       "topics": [],
-      "stars": 2614,
+      "stars": 143734,
       "stars_today": 2614,
-      "forks": 14716,
+      "forks": 14734,
       "author": "multica-ai",
       "author_url": "https://github.com/multica-ai",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "这是一个专门为Claude Code（Anthropic的AI编程助手）设计的配置文件仓库，核心就是一个CLAUDE.md文件，用于优化Claude在写代码时的行为表现。该配置基于Andrej Karpathy（特斯拉AI前总监、知名AI研究者）对大语言模型编程时常见陷阱和毛病的观察总结，比如避免过度自信地生成可能有bug的代码、减少不必要的复杂化等。技术亮点在于它用一套精心设计的提示词规则，把顶尖AI研究者的实践经验浓缩成一个即插即用的配置文件，让开发者能直接改善Claude的编码质量。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.442436"
+      "fetched_at": "2026-05-22T04:45:43.824245"
     },
     {
       "rank": 3,
@@ -102,18 +97,27 @@
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "description": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
       "language": "Python",
-      "topics": [],
-      "stars": 2579,
+      "topics": [
+        "academic-writing",
+        "ai-research",
+        "claude",
+        "claude-code",
+        "literature-review",
+        "peer-review",
+        "prompt-engineering",
+        "academic-pipeline"
+      ],
+      "stars": 18400,
       "stars_today": 2579,
-      "forks": 1576,
+      "forks": 1579,
       "author": "Imbad0202",
       "author_url": "https://github.com/Imbad0202",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "这是一个为Claude Code（Anthropic的AI编程助手）开发的学术研究技能扩展项目，它为Claude赋予了完整的学术论文写作流程支持。该项目的核心功能是通过模块化的方式让AI能够依次完成研究调研、初稿撰写、审阅评审、修改完善到最终定稿的全流程工作。其技术亮点在于将学术写作的完整工作流拆分为清晰的阶段，并通过提示词工程让Claude Code能够像真正的学术研究者一样系统化地完成从文献调研到成稿的各个环节。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.462358"
+      "fetched_at": "2026-05-22T04:45:43.836354"
     },
     {
       "rank": 4,
@@ -122,17 +126,17 @@
       "description": "An agentic skills framework & software development methodology that works.",
       "language": "Shell",
       "topics": [],
-      "stars": 1576,
+      "stars": 201809,
       "stars_today": 1576,
-      "forks": 17973,
+      "forks": 17984,
       "author": "obra",
       "author_url": "https://github.com/obra",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "这是一个提供智能体技能框架和软件开发方法论的项目，旨在通过结构化工作流程提升开发效率。它整合了自动化工具与实践指南，让开发者能快速应用智能代理能力。该框架的核心亮点在于其“开箱即用”的设计，将复杂的代理交互简化为可重复使用的技能模块，降低了应用门槛。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.446320"
+      "fetched_at": "2026-05-22T04:45:43.826580"
     },
     {
       "rank": 5,
@@ -140,18 +144,42 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "description": "Learn it. Build it. Ship it for others.",
       "language": "Python",
-      "topics": [],
-      "stars": 1333,
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "stars": 10930,
       "stars_today": 1333,
-      "forks": 2133,
+      "forks": 2142,
       "author": "rohitg00",
       "author_url": "https://github.com/rohitg00",
-      "ai_category": "uncategorized",
-      "ai_subcategories": [],
-      "summary_zh": "这是一个面向AI工程师的从零到一的实战学习项目，通过手写代码的方式帮助开发者深入理解AI工程的核心概念和实践方法。项目涵盖了从模型开发到部署上线的完整流程，强调\"学、做、交付\"的闭环理念，让学习者能够真正掌握构建生产级AI应用的能力。技术亮点在于采用渐进式教学，从底层原理开始实现，而非简单调用现成框架，适合想要深入理解AI工程细节的开发者。",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp"
+      ],
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.453762"
+      "fetched_at": "2026-05-22T04:45:43.831091"
     },
     {
       "rank": 6,
@@ -159,18 +187,33 @@
       "url": "https://github.com/truelockmc/streambert",
       "description": "A cross-platform Electron Desktop App to stream and download any Movie, TV Series or Anime in the World. Zero Ads and Tracking",
       "language": "JavaScript",
-      "topics": [],
-      "stars": 1094,
+      "topics": [
+        "anime",
+        "anime-downloader",
+        "anime-scraper",
+        "downloader",
+        "electron",
+        "modern-ui",
+        "movies",
+        "movies-streaming",
+        "piracy",
+        "series",
+        "streaming",
+        "streaming-video",
+        "tmdb-api",
+        "tv"
+      ],
+      "stars": 4157,
       "stars_today": 1094,
-      "forks": 322,
+      "forks": 325,
       "author": "truelockmc",
       "author_url": "https://github.com/truelockmc",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "Streambert是一个基于Electron框架开发的跨平台桌面应用，主要用于在线串流和下载全球的电影、电视剧及动漫资源。它的核心功能是聚合各类影视资源提供一站式观看和下载服务，号称无广告无追踪。技术上采用Electron实现Windows、macOS和Linux的跨平台支持，并通过多源聚合的方式整合网络上的影视资源。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.466209"
+      "fetched_at": "2026-05-22T04:45:43.838553"
     },
     {
       "rank": 7,
@@ -179,17 +222,17 @@
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "language": "Shell",
       "topics": [],
-      "stars": 1018,
+      "stars": 103807,
       "stars_today": 1018,
       "forks": 17070,
       "author": "msitarzewski",
       "author_url": "https://github.com/msitarzewski",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "这是一个构建专业AI代理团队的开源项目，旨在提供从开发到运营的完整虚拟团队。它通过预设多个具备特定角色和技能的智能代理（如前端专家、社区运营等），来自动化完成复杂任务流程。其技术亮点在于将大语言模型与角色化设计结合，使每个代理拥有独立的工作流程和个性，从而协作完成跨领域的综合性工作。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.468470"
+      "fetched_at": "2026-05-22T04:45:43.839815"
     },
     {
       "rank": 8,
@@ -197,18 +240,38 @@
       "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
       "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
       "language": "",
-      "topics": [],
-      "stars": 756,
+      "topics": [
+        "awesome",
+        "awesome-list",
+        "lists",
+        "manuals",
+        "resources",
+        "howtos",
+        "hacks",
+        "search-engines",
+        "one-liners",
+        "cheatsheets",
+        "guidelines",
+        "sysops",
+        "devops",
+        "pentesters",
+        "security-researchers",
+        "linux",
+        "bsd",
+        "security",
+        "hacking"
+      ],
+      "stars": 222583,
       "stars_today": 756,
-      "forks": 13331,
+      "forks": 13340,
       "author": "trimstray",
       "author_url": "https://github.com/trimstray",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "这是一个精心整理的技术知识资源库，汇集了各类命令行技巧、实用工具和速查手册。其核心功能是为系统管理员、开发者和安全工程师提供一站式的技术参考集合。最大的亮点在于资源分类清晰且持续更新，覆盖了从基础运维到高级黑客工具的广泛领域，堪称技术人的\"武功秘籍\"。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.464213"
+      "fetched_at": "2026-05-22T04:45:43.837472"
     },
     {
       "rank": 9,
@@ -216,18 +279,22 @@
       "url": "https://github.com/rmyndharis/OpenWA",
       "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
       "language": "TypeScript",
-      "topics": [],
-      "stars": 730,
+      "topics": [
+        "api",
+        "gateway",
+        "whatsapp"
+      ],
+      "stars": 5500,
       "stars_today": 730,
-      "forks": 1086,
+      "forks": 1089,
       "author": "rmyndharis",
       "author_url": "https://github.com/rmyndharis",
       "ai_category": "uncategorized",
       "ai_subcategories": [],
-      "summary_zh": "OpenWA是一个免费的开源项目，它是一个自托管的WhatsApp API网关。它的核心功能是允许用户通过Node.js脚本自动化地收发WhatsApp消息，实现自动回复或集成到其他系统中。其主要技术亮点在于通过浏览器自动化（如Puppeteer）在本地模拟WhatsApp网页版客户端，从而在不使用官方商业API的情况下提供灵活的自动化能力，适合开发者和企业进行二次开发。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.449946"
+      "fetched_at": "2026-05-22T04:45:43.828805"
     },
     {
       "rank": 10,
@@ -235,18 +302,24 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "language": "Python",
-      "topics": [],
-      "stars": 682,
+      "topics": [
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "stars": 22873,
       "stars_today": 682,
-      "forks": 2656,
+      "forks": 2658,
       "author": "anthropics",
       "author_url": "https://github.com/anthropics",
-      "ai_category": "llm",
-      "ai_subcategories": [],
-      "summary_zh": "这个仓库是Anthropic官方维护的Claude代码插件集合，为Claude Code用户提供高质量、经过官方验证的扩展功能。其核心功能是集中管理和分发这些插件，方便开发者直接集成到Claude Code中使用。技术亮点在于它提供了官方标准的插件接口和质量审核流程，确保插件的可靠性与兼容性。",
+      "ai_category": "mcp",
+      "ai_subcategories": [
+        "llm"
+      ],
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.438654"
+      "fetched_at": "2026-05-22T04:45:43.821921"
     },
     {
       "rank": 11,
@@ -254,18 +327,38 @@
       "url": "https://github.com/Lum1104/Understand-Anything",
       "description": "Graphs that teach > graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more.",
       "language": "TypeScript",
-      "topics": [],
-      "stars": 666,
+      "topics": [
+        "claude-code",
+        "claude-skills",
+        "understandcode",
+        "codex",
+        "codex-skills",
+        "knowledge-graph",
+        "opencode-skills",
+        "antigravity-skills",
+        "gemini-cli-skills",
+        "pi-agent",
+        "business-knowledge",
+        "knowledge-base",
+        "memory",
+        "karpathy-llm-wiki",
+        "codebase-analysis",
+        "developer-tools-ai-agent",
+        "vibe-coding"
+      ],
+      "stars": 16884,
       "stars_today": 666,
-      "forks": 1568,
+      "forks": 1577,
       "author": "Lum1104",
       "author_url": "https://github.com/Lum1104",
-      "ai_category": "uncategorized",
-      "ai_subcategories": [],
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.472793"
+      "fetched_at": "2026-05-22T04:45:43.842134"
     },
     {
       "rank": 12,
@@ -274,9 +367,9 @@
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "language": "Python",
       "topics": [],
-      "stars": 656,
+      "stars": 39238,
       "stars_today": 656,
-      "forks": 3718,
+      "forks": 3719,
       "author": "HKUDS",
       "author_url": "https://github.com/HKUDS",
       "ai_category": "uncategorized",
@@ -284,7 +377,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.448137"
+      "fetched_at": "2026-05-22T04:45:43.827777"
     },
     {
       "rank": 13,
@@ -293,9 +386,9 @@
       "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
       "language": "Go",
       "topics": [],
-      "stars": 534,
+      "stars": 30910,
       "stars_today": 534,
-      "forks": 3750,
+      "forks": 3755,
       "author": "multica-ai",
       "author_url": "https://github.com/multica-ai",
       "ai_category": "uncategorized",
@@ -303,7 +396,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.460606"
+      "fetched_at": "2026-05-22T04:45:43.835289"
     },
     {
       "rank": 14,
@@ -311,18 +404,38 @@
       "url": "https://github.com/can1357/oh-my-pi",
       "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
       "language": "TypeScript",
-      "topics": [],
-      "stars": 500,
+      "topics": [
+        "bun",
+        "cli",
+        "typescript",
+        "ai-agent",
+        "coding-assistant",
+        "llm",
+        "ai-coding-agent",
+        "anthropic",
+        "claude",
+        "mcp",
+        "multi-provider",
+        "openai",
+        "rust",
+        "terminal",
+        "tui"
+      ],
+      "stars": 5941,
       "stars_today": 500,
-      "forks": 479,
+      "forks": 482,
       "author": "can1357",
       "author_url": "https://github.com/can1357",
-      "ai_category": "ai_tooling",
-      "ai_subcategories": [],
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp",
+        "ai_tooling"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.457239"
+      "fetched_at": "2026-05-22T04:45:43.833235"
     },
     {
       "rank": 15,
@@ -330,20 +443,32 @@
       "url": "https://github.com/antoinezambelli/forge",
       "description": "A Python framework for self-hosted LLM tool-calling and multi-step agentic workflows",
       "language": "Python",
-      "topics": [],
-      "stars": 398,
+      "topics": [
+        "agentic-ai",
+        "agentic-workflow",
+        "agents",
+        "function-calling",
+        "llama-cpp",
+        "llamafile",
+        "llm",
+        "ollama",
+        "python",
+        "self-hosted",
+        "tool-calling"
+      ],
+      "stars": 1541,
       "stars_today": 398,
-      "forks": 79,
+      "forks": 81,
       "author": "antoinezambelli",
       "author_url": "https://github.com/antoinezambelli",
-      "ai_category": "llm",
+      "ai_category": "agent",
       "ai_subcategories": [
-        "agent"
+        "llm"
       ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.458836"
+      "fetched_at": "2026-05-22T04:45:43.834219"
     },
     {
       "rank": 16,
@@ -351,10 +476,25 @@
       "url": "https://github.com/teng-lin/notebooklm-py",
       "description": "Unofficial Python API and agentic skill for Google NotebookLM. Full programmatic access to NotebookLM's features—including capabilities the web UI doesn't expose—via Python, CLI, and AI agents like Claude Code, Codex, and OpenClaw.",
       "language": "Python",
-      "topics": [],
-      "stars": 186,
+      "topics": [
+        "api",
+        "claude",
+        "python",
+        "sdk",
+        "skills",
+        "google-notebooklm",
+        "notebooklm",
+        "notebooklm-api",
+        "podcast-generator",
+        "python-api",
+        "agentic-skill",
+        "claude-skills",
+        "openclaw-skills",
+        "notebooklm-skill"
+      ],
+      "stars": 14452,
       "stars_today": 186,
-      "forks": 1998,
+      "forks": 2000,
       "author": "teng-lin",
       "author_url": "https://github.com/teng-lin",
       "ai_category": "agent",
@@ -362,7 +502,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.455479"
+      "fetched_at": "2026-05-22T04:45:43.832154"
     },
     {
       "rank": 17,
@@ -370,10 +510,19 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "description": "Chrome DevTools for coding agents",
       "language": "TypeScript",
-      "topics": [],
-      "stars": 151,
+      "topics": [
+        "mcp-server",
+        "puppeteer",
+        "chrome-devtools",
+        "browser",
+        "chrome",
+        "debugging",
+        "devtools",
+        "mcp"
+      ],
+      "stars": 40593,
       "stars_today": 151,
-      "forks": 2575,
+      "forks": 2576,
       "author": "ChromeDevTools",
       "author_url": "https://github.com/ChromeDevTools",
       "ai_category": "mcp",
@@ -381,7 +530,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.451725"
+      "fetched_at": "2026-05-22T04:45:43.829873"
     },
     {
       "rank": 18,
@@ -389,18 +538,22 @@
       "url": "https://github.com/dotnet/skills",
       "description": "Repository for skills to assist AI coding agents with .NET and C#",
       "language": "C#",
-      "topics": [],
-      "stars": 129,
+      "topics": [
+        "agent-skills"
+      ],
+      "stars": 2263,
       "stars_today": 129,
-      "forks": 180,
+      "forks": 183,
       "author": "dotnet",
       "author_url": "https://github.com/dotnet",
-      "ai_category": "ai_tooling",
-      "ai_subcategories": [],
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.444216"
+      "fetched_at": "2026-05-22T04:45:43.825328"
     },
     {
       "rank": 19,
@@ -408,10 +561,21 @@
       "url": "https://github.com/alireza0/s-ui",
       "description": "An advanced Web Panel • Built for SagerNet/Sing-Box",
       "language": "Go",
-      "topics": [],
-      "stars": 27,
+      "topics": [
+        "hysteria",
+        "hysteria2",
+        "naive-proxy",
+        "shadowsocks",
+        "shadowtls",
+        "sing-box",
+        "trojan",
+        "tuic",
+        "vless",
+        "vmess"
+      ],
+      "stars": 8963,
       "stars_today": 27,
-      "forks": 1505,
+      "forks": 1507,
       "author": "alireza0",
       "author_url": "https://github.com/alireza0",
       "ai_category": "uncategorized",
@@ -419,7 +583,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.470908"
+      "fetched_at": "2026-05-22T04:45:43.841071"
     }
   ],
   "new_entrants": [],
@@ -431,17 +595,17 @@
       "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
       "language": "",
       "topics": [],
-      "stars": 2614,
+      "stars": 143734,
       "stars_today": 2614,
-      "forks": 14716,
+      "forks": 14734,
       "author": "multica-ai",
       "author_url": "https://github.com/multica-ai",
       "ai_category": "llm",
       "ai_subcategories": [],
-      "summary_zh": "这是一个专门为Claude Code（Anthropic的AI编程助手）设计的配置文件仓库，核心就是一个CLAUDE.md文件，用于优化Claude在写代码时的行为表现。该配置基于Andrej Karpathy（特斯拉AI前总监、知名AI研究者）对大语言模型编程时常见陷阱和毛病的观察总结，比如避免过度自信地生成可能有bug的代码、减少不必要的复杂化等。技术亮点在于它用一套精心设计的提示词规则，把顶尖AI研究者的实践经验浓缩成一个即插即用的配置文件，让开发者能直接改善Claude的编码质量。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.442436"
+      "fetched_at": "2026-05-22T04:45:43.824245"
     },
     {
       "rank": 4,
@@ -450,17 +614,60 @@
       "description": "An agentic skills framework & software development methodology that works.",
       "language": "Shell",
       "topics": [],
-      "stars": 1576,
+      "stars": 201809,
       "stars_today": 1576,
-      "forks": 17973,
+      "forks": 17984,
       "author": "obra",
       "author_url": "https://github.com/obra",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "这是一个提供智能体技能框架和软件开发方法论的项目，旨在通过结构化工作流程提升开发效率。它整合了自动化工具与实践指南，让开发者能快速应用智能代理能力。该框架的核心亮点在于其“开箱即用”的设计，将复杂的代理交互简化为可重复使用的技能模块，降低了应用门槛。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.446320"
+      "fetched_at": "2026-05-22T04:45:43.826580"
+    },
+    {
+      "rank": 5,
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "stars": 10930,
+      "stars_today": 1333,
+      "forks": 2142,
+      "author": "rohitg00",
+      "author_url": "https://github.com/rohitg00",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-05-22T04:45:43.831091"
     },
     {
       "rank": 7,
@@ -469,17 +676,17 @@
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
       "language": "Shell",
       "topics": [],
-      "stars": 1018,
+      "stars": 103807,
       "stars_today": 1018,
       "forks": 17070,
       "author": "msitarzewski",
       "author_url": "https://github.com/msitarzewski",
       "ai_category": "agent",
       "ai_subcategories": [],
-      "summary_zh": "这是一个构建专业AI代理团队的开源项目，旨在提供从开发到运营的完整虚拟团队。它通过预设多个具备特定角色和技能的智能代理（如前端专家、社区运营等），来自动化完成复杂任务流程。其技术亮点在于将大语言模型与角色化设计结合，使每个代理拥有独立的工作流程和个性，从而协作完成跨领域的综合性工作。",
+      "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.468470"
+      "fetched_at": "2026-05-22T04:45:43.839815"
     },
     {
       "rank": 10,
@@ -487,39 +694,26 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
       "language": "Python",
-      "topics": [],
-      "stars": 682,
+      "topics": [
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "stars": 22873,
       "stars_today": 682,
-      "forks": 2656,
+      "forks": 2658,
       "author": "anthropics",
       "author_url": "https://github.com/anthropics",
-      "ai_category": "llm",
-      "ai_subcategories": [],
-      "summary_zh": "这个仓库是Anthropic官方维护的Claude代码插件集合，为Claude Code用户提供高质量、经过官方验证的扩展功能。其核心功能是集中管理和分发这些插件，方便开发者直接集成到Claude Code中使用。技术亮点在于它提供了官方标准的插件接口和质量审核流程，确保插件的可靠性与兼容性。",
-      "summary_en": "",
-      "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.438654"
-    },
-    {
-      "rank": 14,
-      "name": "can1357/oh-my-pi",
-      "url": "https://github.com/can1357/oh-my-pi",
-      "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
-      "language": "TypeScript",
-      "topics": [],
-      "stars": 500,
-      "stars_today": 500,
-      "forks": 479,
-      "author": "can1357",
-      "author_url": "https://github.com/can1357",
-      "ai_category": "ai_tooling",
-      "ai_subcategories": [],
+      "ai_category": "mcp",
+      "ai_subcategories": [
+        "llm"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-05-22T03:14:32.457239"
+      "fetched_at": "2026-05-22T04:45:43.821921"
     }
   ],
-  "insight_zh": "今日GitHub AI趋势中，总计9个AI项目上榜。colbymchenry/codegraph（+4294星）成为最热门项目，其为Claude Code提供代码知识图谱支持。分类显示大语言模型和AI Agent各占33.3%，主导趋势方向。",
+  "insight_zh": "",
   "insight_en": ""
 }
