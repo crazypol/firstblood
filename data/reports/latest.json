@@ -1,65 +1,60 @@
 {
-  "date": "2026-10-12",
-  "generated_at": "2026-10-12T06:23:05.963915",
-  "total_repos": 8,
-  "total_ai_repos": 4,
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T07:01:00.625793",
+  "total_repos": 9,
+  "total_ai_repos": 7,
   "categories": [
+    {
+      "name": "llm",
+      "count": 4,
+      "percentage": 57.1
+    },
     {
       "name": "agent",
       "count": 2,
-      "percentage": 50.0
+      "percentage": 28.6
     },
     {
-      "name": "ml_platform",
+      "name": "mcp",
       "count": 1,
-      "percentage": 25.0
-    },
-    {
-      "name": "llm",
-      "count": 1,
-      "percentage": 25.0
+      "percentage": 14.3
     }
   ],
   "languages": [
     {
       "name": "TypeScript",
-      "count": 1,
-      "percentage": 12.5
+      "count": 2,
+      "percentage": 22.2
     },
     {
-      "name": "C++",
-      "count": 1,
-      "percentage": 12.5
-    },
-    {
-      "name": "Rust",
-      "count": 1,
-      "percentage": 12.5
-    },
-    {
-      "name": "HTML",
-      "count": 1,
-      "percentage": 12.5
+      "name": "Python",
+      "count": 2,
+      "percentage": 22.2
     },
     {
       "name": "JavaScript",
       "count": 1,
-      "percentage": 12.5
+      "percentage": 11.1
     },
     {
-      "name": "Python",
+      "name": "Rust",
       "count": 1,
-      "percentage": 12.5
+      "percentage": 11.1
+    },
+    {
+      "name": "HTML",
+      "count": 1,
+      "percentage": 11.1
     },
     {
       "name": "Jupyter Notebook",
       "count": 1,
-      "percentage": 12.5
+      "percentage": 11.1
     },
     {
-      "name": "Assembly",
+      "name": "C++",
       "count": 1,
-      "percentage": 12.5
+      "percentage": 11.1
     }
   ],
   "top_repos": [
@@ -91,9 +86,9 @@
         "developer-tools",
         "llm"
       ],
-      "stars": 117832,
-      "stars_today": 25599,
-      "forks": 26464,
+      "stars": 173998,
+      "stars_today": 45327,
+      "forks": 41702,
       "author": "morluto",
       "author_url": "https://github.com/morluto",
       "ai_category": "agent",
@@ -104,37 +99,10 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.468552"
+      "fetched_at": "2026-10-13T07:00:56.310250"
     },
     {
       "rank": 2,
-      "name": "boykopovar/AnyPS5",
-      "url": "https://github.com/boykopovar/AnyPS5",
-      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-      "language": "C++",
-      "topics": [
-        "dynamic-library",
-        "game-porting",
-        "ps5-tools",
-        "vulkan",
-        "spir-v",
-        "anyps5",
-        "ps5"
-      ],
-      "stars": 30846,
-      "stars_today": 3952,
-      "forks": 2656,
-      "author": "boykopovar",
-      "author_url": "https://github.com/boykopovar",
-      "ai_category": "uncategorized",
-      "ai_subcategories": [],
-      "summary_zh": "",
-      "summary_en": "",
-      "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.469563"
-    },
-    {
-      "rank": 3,
       "name": "storytold/artcraft",
       "url": "https://github.com/storytold/artcraft",
       "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
@@ -146,9 +114,9 @@
         "filmmaking",
         "imagegeneration"
       ],
-      "stars": 18876,
-      "stars_today": 2957,
-      "forks": 3092,
+      "stars": 23115,
+      "stars_today": 4095,
+      "forks": 3690,
       "author": "storytold",
       "author_url": "https://github.com/storytold",
       "ai_category": "uncategorized",
@@ -156,10 +124,10 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.470488"
+      "fetched_at": "2026-10-13T07:00:56.313365"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "cathrynlavery/diagram-design",
       "url": "https://github.com/cathrynlavery/diagram-design",
       "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
@@ -174,9 +142,9 @@
         "mermaid",
         "svg"
       ],
-      "stars": 50920,
-      "stars_today": 1083,
-      "forks": 3230,
+      "stars": 53065,
+      "stars_today": 2081,
+      "forks": 3352,
       "author": "cathrynlavery",
       "author_url": "https://github.com/cathrynlavery",
       "ai_category": "agent",
@@ -184,10 +152,10 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.471605"
+      "fetched_at": "2026-10-13T07:00:56.315557"
     },
     {
-      "rank": 5,
+      "rank": 4,
       "name": "bilawalsidhu/gods-eye-view",
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
@@ -206,9 +174,9 @@
         "webgl",
         "worldview"
       ],
-      "stars": 52147,
-      "stars_today": 886,
-      "forks": 10433,
+      "stars": 54179,
+      "stars_today": 1895,
+      "forks": 10664,
       "author": "bilawalsidhu",
       "author_url": "https://github.com/bilawalsidhu",
       "ai_category": "uncategorized",
@@ -216,13 +184,13 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.472510"
+      "fetched_at": "2026-10-13T07:00:56.311299"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "name": "lyogavin/airllm",
       "url": "https://github.com/lyogavin/airllm",
-      "description": "AirLLM 70B inference with single 4GB GPU",
+      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
       "language": "Jupyter Notebook",
       "topics": [
         "chinese-nlp",
@@ -239,160 +207,259 @@
         "qlora",
         "chinese-llm"
       ],
-      "stars": 36732,
-      "stars_today": 548,
-      "forks": 3828,
+      "stars": 37769,
+      "stars_today": 879,
+      "forks": 3890,
       "author": "lyogavin",
       "author_url": "https://github.com/lyogavin",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-10-13T07:00:56.316675"
+    },
+    {
+      "rank": 6,
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 59510,
+      "stars_today": 626,
+      "forks": 9353,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
       "ai_category": "llm",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.474559"
+      "fetched_at": "2026-10-13T07:00:56.318553"
     },
     {
       "rank": 7,
-      "name": "chrislgarry/Apollo-11",
-      "url": "https://github.com/chrislgarry/Apollo-11",
-      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-      "language": "Assembly",
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "language": "TypeScript",
       "topics": [
-        "agc",
-        "nasa",
-        "apollo",
-        "hacktoberfest"
+        "claude",
+        "claude-code",
+        "claude-code-plugins",
+        "mcp",
+        "skills",
+        "codex",
+        "copilot",
+        "opencode",
+        "antigravity",
+        "kiro",
+        "openclaw",
+        "claude-code-hooks",
+        "claude-code-skill",
+        "codex-cli",
+        "cursor-plugin",
+        "mcp-server",
+        "mcp-tools",
+        "pi-agent",
+        "zed-extension",
+        "context-mode"
       ],
-      "stars": 74401,
-      "stars_today": 466,
-      "forks": 8114,
-      "author": "chrislgarry",
-      "author_url": "https://github.com/chrislgarry",
-      "ai_category": "uncategorized",
-      "ai_subcategories": [],
+      "stars": 27550,
+      "stars_today": 246,
+      "forks": 1956,
+      "author": "mksglu",
+      "author_url": "https://github.com/mksglu",
+      "ai_category": "mcp",
+      "ai_subcategories": [
+        "agent",
+        "ai_tooling"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.475628"
+      "fetched_at": "2026-10-13T07:00:56.312413"
     },
     {
       "rank": 8,
-      "name": "pytorch/pytorch",
-      "url": "https://github.com/pytorch/pytorch",
-      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "name": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
       "language": "Python",
       "topics": [
-        "neural-network",
-        "autograd",
-        "gpu",
-        "numpy",
-        "deep-learning",
-        "tensor",
-        "python",
-        "machine-learning"
+        "ollama",
+        "ollama-webui",
+        "llm",
+        "webui",
+        "self-hosted",
+        "llm-ui",
+        "llm-webui",
+        "llms",
+        "rag",
+        "ai",
+        "open-webui",
+        "ui",
+        "openai",
+        "mcp",
+        "openapi"
       ],
-      "stars": 104623,
-      "stars_today": 315,
-      "forks": 32177,
-      "author": "pytorch",
-      "author_url": "https://github.com/pytorch",
-      "ai_category": "ml_platform",
+      "stars": 155324,
+      "stars_today": 157,
+      "forks": 22663,
+      "author": "open-webui",
+      "author_url": "https://github.com/open-webui",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "rag",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-10-13T07:00:56.314475"
+    },
+    {
+      "rank": 9,
+      "name": "microsoft/BitNet",
+      "url": "https://github.com/microsoft/BitNet",
+      "description": "Official inference framework for 1-bit LLMs",
+      "language": "C++",
+      "topics": [],
+      "stars": 41026,
+      "stars_today": 97,
+      "forks": 3819,
+      "author": "microsoft",
+      "author_url": "https://github.com/microsoft",
+      "ai_category": "llm",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.473468"
+      "fetched_at": "2026-10-13T07:00:56.317624"
     }
   ],
   "new_entrants": [
     {
-      "rank": 5,
-      "name": "bilawalsidhu/gods-eye-view",
-      "url": "https://github.com/bilawalsidhu/gods-eye-view",
-      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
-      "language": "JavaScript",
-      "topics": [
-        "3d-globe",
-        "cesium",
-        "flight-tracking",
-        "geospatial",
-        "geospatial-intelligence",
-        "gis",
-        "osint",
-        "photogrammetry",
-        "satellite-tracking",
-        "spatial-intelligence",
-        "webgl",
-        "worldview"
-      ],
-      "stars": 52147,
-      "stars_today": 886,
-      "forks": 10433,
-      "author": "bilawalsidhu",
-      "author_url": "https://github.com/bilawalsidhu",
-      "ai_category": "uncategorized",
-      "ai_subcategories": [],
-      "summary_zh": "",
-      "summary_en": "",
-      "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.472510"
-    },
-    {
       "rank": 6,
-      "name": "lyogavin/airllm",
-      "url": "https://github.com/lyogavin/airllm",
-      "description": "AirLLM 70B inference with single 4GB GPU",
-      "language": "Jupyter Notebook",
-      "topics": [
-        "chinese-nlp",
-        "finetune",
-        "generative-ai",
-        "instruct-gpt",
-        "instruction-set",
-        "llama",
-        "llm",
-        "lora",
-        "open-models",
-        "open-source",
-        "open-source-models",
-        "qlora",
-        "chinese-llm"
-      ],
-      "stars": 36732,
-      "stars_today": 548,
-      "forks": 3828,
-      "author": "lyogavin",
-      "author_url": "https://github.com/lyogavin",
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 59510,
+      "stars_today": 626,
+      "forks": 9353,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
       "ai_category": "llm",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.474559"
+      "fetched_at": "2026-10-13T07:00:56.318553"
     },
     {
       "rank": 7,
-      "name": "chrislgarry/Apollo-11",
-      "url": "https://github.com/chrislgarry/Apollo-11",
-      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
-      "language": "Assembly",
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "language": "TypeScript",
       "topics": [
-        "agc",
-        "nasa",
-        "apollo",
-        "hacktoberfest"
+        "claude",
+        "claude-code",
+        "claude-code-plugins",
+        "mcp",
+        "skills",
+        "codex",
+        "copilot",
+        "opencode",
+        "antigravity",
+        "kiro",
+        "openclaw",
+        "claude-code-hooks",
+        "claude-code-skill",
+        "codex-cli",
+        "cursor-plugin",
+        "mcp-server",
+        "mcp-tools",
+        "pi-agent",
+        "zed-extension",
+        "context-mode"
       ],
-      "stars": 74401,
-      "stars_today": 466,
-      "forks": 8114,
-      "author": "chrislgarry",
-      "author_url": "https://github.com/chrislgarry",
-      "ai_category": "uncategorized",
+      "stars": 27550,
+      "stars_today": 246,
+      "forks": 1956,
+      "author": "mksglu",
+      "author_url": "https://github.com/mksglu",
+      "ai_category": "mcp",
+      "ai_subcategories": [
+        "agent",
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-10-13T07:00:56.312413"
+    },
+    {
+      "rank": 8,
+      "name": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "language": "Python",
+      "topics": [
+        "ollama",
+        "ollama-webui",
+        "llm",
+        "webui",
+        "self-hosted",
+        "llm-ui",
+        "llm-webui",
+        "llms",
+        "rag",
+        "ai",
+        "open-webui",
+        "ui",
+        "openai",
+        "mcp",
+        "openapi"
+      ],
+      "stars": 155324,
+      "stars_today": 157,
+      "forks": 22663,
+      "author": "open-webui",
+      "author_url": "https://github.com/open-webui",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "rag",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-10-13T07:00:56.314475"
+    },
+    {
+      "rank": 9,
+      "name": "microsoft/BitNet",
+      "url": "https://github.com/microsoft/BitNet",
+      "description": "Official inference framework for 1-bit LLMs",
+      "language": "C++",
+      "topics": [],
+      "stars": 41026,
+      "stars_today": 97,
+      "forks": 3819,
+      "author": "microsoft",
+      "author_url": "https://github.com/microsoft",
+      "ai_category": "llm",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.475628"
+      "fetched_at": "2026-10-13T07:00:56.317624"
     }
   ],
   "top_gainers": [
@@ -424,9 +491,9 @@
         "developer-tools",
         "llm"
       ],
-      "stars": 117832,
-      "stars_today": 25599,
-      "forks": 26464,
+      "stars": 173998,
+      "stars_today": 45327,
+      "forks": 41702,
       "author": "morluto",
       "author_url": "https://github.com/morluto",
       "ai_category": "agent",
@@ -437,10 +504,10 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.468552"
+      "fetched_at": "2026-10-13T07:00:56.310250"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "cathrynlavery/diagram-design",
       "url": "https://github.com/cathrynlavery/diagram-design",
       "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
@@ -455,9 +522,9 @@
         "mermaid",
         "svg"
       ],
-      "stars": 50920,
-      "stars_today": 1083,
-      "forks": 3230,
+      "stars": 53065,
+      "stars_today": 2081,
+      "forks": 3352,
       "author": "cathrynlavery",
       "author_url": "https://github.com/cathrynlavery",
       "ai_category": "agent",
@@ -465,13 +532,13 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.471605"
+      "fetched_at": "2026-10-13T07:00:56.315557"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "name": "lyogavin/airllm",
       "url": "https://github.com/lyogavin/airllm",
-      "description": "AirLLM 70B inference with single 4GB GPU",
+      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
       "language": "Jupyter Notebook",
       "topics": [
         "chinese-nlp",
@@ -488,45 +555,81 @@
         "qlora",
         "chinese-llm"
       ],
-      "stars": 36732,
-      "stars_today": 548,
-      "forks": 3828,
+      "stars": 37769,
+      "stars_today": 879,
+      "forks": 3890,
       "author": "lyogavin",
       "author_url": "https://github.com/lyogavin",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-10-13T07:00:56.316675"
+    },
+    {
+      "rank": 6,
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 59510,
+      "stars_today": 626,
+      "forks": 9353,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
       "ai_category": "llm",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.474559"
+      "fetched_at": "2026-10-13T07:00:56.318553"
     },
     {
-      "rank": 8,
-      "name": "pytorch/pytorch",
-      "url": "https://github.com/pytorch/pytorch",
-      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-      "language": "Python",
+      "rank": 7,
+      "name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "language": "TypeScript",
       "topics": [
-        "neural-network",
-        "autograd",
-        "gpu",
-        "numpy",
-        "deep-learning",
-        "tensor",
-        "python",
-        "machine-learning"
+        "claude",
+        "claude-code",
+        "claude-code-plugins",
+        "mcp",
+        "skills",
+        "codex",
+        "copilot",
+        "opencode",
+        "antigravity",
+        "kiro",
+        "openclaw",
+        "claude-code-hooks",
+        "claude-code-skill",
+        "codex-cli",
+        "cursor-plugin",
+        "mcp-server",
+        "mcp-tools",
+        "pi-agent",
+        "zed-extension",
+        "context-mode"
       ],
-      "stars": 104623,
-      "stars_today": 315,
-      "forks": 32177,
-      "author": "pytorch",
-      "author_url": "https://github.com/pytorch",
-      "ai_category": "ml_platform",
-      "ai_subcategories": [],
+      "stars": 27550,
+      "stars_today": 246,
+      "forks": 1956,
+      "author": "mksglu",
+      "author_url": "https://github.com/mksglu",
+      "ai_category": "mcp",
+      "ai_subcategories": [
+        "agent",
+        "ai_tooling"
+      ],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-10-12T06:23:02.473468"
+      "fetched_at": "2026-10-13T07:00:56.312413"
     }
   ],
   "insight_zh": "",
