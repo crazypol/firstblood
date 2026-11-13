@@ -1,0 +1,672 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T07:06:57.323268",
+  "total_repos": 13,
+  "total_ai_repos": 6,
+  "categories": [
+    {
+      "name": "agent",
+      "count": 3,
+      "percentage": 50.0
+    },
+    {
+      "name": "llm",
+      "count": 2,
+      "percentage": 33.3
+    },
+    {
+      "name": "ai_tooling",
+      "count": 1,
+      "percentage": 16.7
+    }
+  ],
+  "languages": [
+    {
+      "name": "TypeScript",
+      "count": 5,
+      "percentage": 38.5
+    },
+    {
+      "name": "JavaScript",
+      "count": 2,
+      "percentage": 15.4
+    },
+    {
+      "name": "Shell",
+      "count": 1,
+      "percentage": 7.7
+    },
+    {
+      "name": "Objective-C",
+      "count": 1,
+      "percentage": 7.7
+    },
+    {
+      "name": "Ruby",
+      "count": 1,
+      "percentage": 7.7
+    },
+    {
+      "name": "Zig",
+      "count": 1,
+      "percentage": 7.7
+    },
+    {
+      "name": "Python",
+      "count": 1,
+      "percentage": 7.7
+    },
+    {
+      "name": "C++",
+      "count": 1,
+      "percentage": 7.7
+    }
+  ],
+  "top_repos": [
+    {
+      "rank": 1,
+      "name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 26883,
+      "stars_today": 1830,
+      "forks": 2084,
+      "author": "meta",
+      "author_url": "https://github.com/meta",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.333750"
+    },
+    {
+      "rank": 2,
+      "name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "topics": [],
+      "stars": 14180,
+      "stars_today": 967,
+      "forks": 1068,
+      "author": "we-promise",
+      "author_url": "https://github.com/we-promise",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.330372"
+    },
+    {
+      "rank": 3,
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "cursor",
+        "skills",
+        "codex"
+      ],
+      "stars": 116851,
+      "stars_today": 816,
+      "forks": 12219,
+      "author": "addyosmani",
+      "author_url": "https://github.com/addyosmani",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.333126"
+    },
+    {
+      "rank": 4,
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 3627,
+      "stars_today": 739,
+      "forks": 224,
+      "author": "GoogleChrome",
+      "author_url": "https://github.com/GoogleChrome",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.327618"
+    },
+    {
+      "rank": 5,
+      "name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops",
+        "nodejs",
+        "npm",
+        "openai",
+        "sdk",
+        "security",
+        "typescript",
+        "vulnerability-scanning"
+      ],
+      "stars": 12659,
+      "stars_today": 643,
+      "forks": 989,
+      "author": "openai",
+      "author_url": "https://github.com/openai",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.328397"
+    },
+    {
+      "rank": 6,
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 69538,
+      "stars_today": 415,
+      "forks": 10799,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
+      "ai_category": "llm",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335036"
+    },
+    {
+      "rank": 7,
+      "name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "stars": 11848,
+      "stars_today": 298,
+      "forks": 1455,
+      "author": "CopilotKit",
+      "author_url": "https://github.com/CopilotKit",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.334398"
+    },
+    {
+      "rank": 8,
+      "name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "topics": [],
+      "stars": 1651,
+      "stars_today": 218,
+      "forks": 145,
+      "author": "pookjw",
+      "author_url": "https://github.com/pookjw",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.329712"
+    },
+    {
+      "rank": 9,
+      "name": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "topics": [
+        "ggml"
+      ],
+      "stars": 134716,
+      "stars_today": 176,
+      "forks": 25524,
+      "author": "ggml-org",
+      "author_url": "https://github.com/ggml-org",
+      "ai_category": "ai_tooling",
+      "ai_subcategories": [
+        "llm"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335654"
+    },
+    {
+      "rank": 10,
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "qwen",
+        "terminal",
+        "typescript"
+      ],
+      "stars": 29982,
+      "stars_today": 151,
+      "forks": 3409,
+      "author": "QwenLM",
+      "author_url": "https://github.com/QwenLM",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp",
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.331015"
+    },
+    {
+      "rank": 11,
+      "name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "language": "Shell",
+      "topics": [
+        "nvm",
+        "nodejs",
+        "node",
+        "node-js",
+        "version-manager",
+        "posix",
+        "posix-compliant",
+        "bash",
+        "zsh",
+        "shell",
+        "nvmrc",
+        "lts",
+        "install"
+      ],
+      "stars": 96063,
+      "stars_today": 63,
+      "forks": 10761,
+      "author": "nvm-sh",
+      "author_url": "https://github.com/nvm-sh",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.329067"
+    },
+    {
+      "rank": 12,
+      "name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "topics": [
+        "nodejs",
+        "javascript",
+        "node",
+        "js",
+        "runtime",
+        "mit",
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "stars": 123656,
+      "stars_today": 62,
+      "forks": 38060,
+      "author": "nodejs",
+      "author_url": "https://github.com/nodejs",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.332494"
+    },
+    {
+      "rank": 13,
+      "name": "ashhart/TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "stars": 2019,
+      "stars_today": 54,
+      "forks": 397,
+      "author": "ashhart",
+      "author_url": "https://github.com/ashhart",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.331748"
+    }
+  ],
+  "new_entrants": [
+    {
+      "rank": 6,
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 69538,
+      "stars_today": 415,
+      "forks": 10799,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
+      "ai_category": "llm",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335036"
+    },
+    {
+      "rank": 7,
+      "name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "stars": 11848,
+      "stars_today": 298,
+      "forks": 1455,
+      "author": "CopilotKit",
+      "author_url": "https://github.com/CopilotKit",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.334398"
+    },
+    {
+      "rank": 8,
+      "name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "topics": [],
+      "stars": 1651,
+      "stars_today": 218,
+      "forks": 145,
+      "author": "pookjw",
+      "author_url": "https://github.com/pookjw",
+      "ai_category": "uncategorized",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.329712"
+    },
+    {
+      "rank": 9,
+      "name": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "topics": [
+        "ggml"
+      ],
+      "stars": 134716,
+      "stars_today": 176,
+      "forks": 25524,
+      "author": "ggml-org",
+      "author_url": "https://github.com/ggml-org",
+      "ai_category": "ai_tooling",
+      "ai_subcategories": [
+        "llm"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335654"
+    },
+    {
+      "rank": 10,
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "qwen",
+        "terminal",
+        "typescript"
+      ],
+      "stars": 29982,
+      "stars_today": 151,
+      "forks": 3409,
+      "author": "QwenLM",
+      "author_url": "https://github.com/QwenLM",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp",
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.331015"
+    }
+  ],
+  "top_gainers": [
+    {
+      "rank": 3,
+      "name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "cursor",
+        "skills",
+        "codex"
+      ],
+      "stars": 116851,
+      "stars_today": 816,
+      "forks": 12219,
+      "author": "addyosmani",
+      "author_url": "https://github.com/addyosmani",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.333126"
+    },
+    {
+      "rank": 6,
+      "name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "topics": [],
+      "stars": 69538,
+      "stars_today": 415,
+      "forks": 10799,
+      "author": "Alishahryar1",
+      "author_url": "https://github.com/Alishahryar1",
+      "ai_category": "llm",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335036"
+    },
+    {
+      "rank": 7,
+      "name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "stars": 11848,
+      "stars_today": 298,
+      "forks": 1455,
+      "author": "CopilotKit",
+      "author_url": "https://github.com/CopilotKit",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "ai_tooling",
+        "mcp"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.334398"
+    },
+    {
+      "rank": 9,
+      "name": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "topics": [
+        "ggml"
+      ],
+      "stars": 134716,
+      "stars_today": 176,
+      "forks": 25524,
+      "author": "ggml-org",
+      "author_url": "https://github.com/ggml-org",
+      "ai_category": "ai_tooling",
+      "ai_subcategories": [
+        "llm"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.335654"
+    },
+    {
+      "rank": 10,
+      "name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "qwen",
+        "terminal",
+        "typescript"
+      ],
+      "stars": 29982,
+      "stars_today": 151,
+      "forks": 3409,
+      "author": "QwenLM",
+      "author_url": "https://github.com/QwenLM",
+      "ai_category": "agent",
+      "ai_subcategories": [
+        "llm",
+        "mcp",
+        "ai_tooling"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-13T07:06:51.331015"
+    }
+  ],
+  "insight_zh": "",
+  "insight_en": ""
+}
