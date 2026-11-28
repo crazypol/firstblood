@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-27",
-  "generated_at": "2026-11-27T08:58:30.253806",
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T08:19:24.992409",
   "total_repos": 16,
   "total_ai_repos": 13,
   "categories": [
@@ -87,9 +87,9 @@
         "security-tools",
         "web-security"
       ],
-      "stars": 25158,
-      "stars_today": 1597,
-      "forks": 2559,
+      "stars": 26496,
+      "stars_today": 1608,
+      "forks": 2709,
       "author": "elementalsouls",
       "author_url": "https://github.com/elementalsouls",
       "ai_category": "llm",
@@ -97,79 +97,38 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.857820"
+      "fetched_at": "2026-11-28T08:19:17.970499"
     },
     {
       "rank": 2,
-      "name": "firecrawl/firecrawl",
-      "url": "https://github.com/firecrawl/firecrawl",
-      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
-      "language": "TypeScript",
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
       "topics": [
         "ai",
-        "crawler",
-        "markdown",
-        "scraper",
-        "html-to-markdown",
-        "llm",
-        "scraping",
-        "web-crawler",
-        "ai-scraping",
-        "webscraping",
-        "web-scraping",
-        "web-data",
-        "web-data-extraction",
-        "ai-agents",
-        "data-extraction",
-        "ai-crawler",
-        "ai-search",
-        "web-scraper",
-        "web-search"
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "superpowers",
+        "subagent-driven-development"
       ],
-      "stars": 211210,
-      "stars_today": 1046,
-      "forks": 11073,
-      "author": "firecrawl",
-      "author_url": "https://github.com/firecrawl",
-      "ai_category": "llm",
-      "ai_subcategories": [
-        "agent"
-      ],
-      "summary_zh": "",
-      "summary_en": "",
-      "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.861015"
-    },
-    {
-      "rank": 3,
-      "name": "cathrynlavery/diagram-design",
-      "url": "https://github.com/cathrynlavery/diagram-design",
-      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "language": "HTML",
-      "topics": [
-        "agent-skills",
-        "claude-code",
-        "codex",
-        "data-visualization",
-        "diagrams",
-        "drawio",
-        "mermaid",
-        "svg"
-      ],
-      "stars": 74135,
-      "stars_today": 955,
-      "forks": 4966,
-      "author": "cathrynlavery",
-      "author_url": "https://github.com/cathrynlavery",
+      "stars": 328557,
+      "stars_today": 922,
+      "forks": 29203,
+      "author": "obra",
+      "author_url": "https://github.com/obra",
       "ai_category": "agent",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.862860"
+      "fetched_at": "2026-11-28T08:19:17.971646"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "name": "XiaoYouChR/Ghost-Downloader-3",
       "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
       "description": "The only downloader you need. 下载器的集大成者。",
@@ -195,9 +154,9 @@
         "download-manager",
         "bt"
       ],
-      "stars": 19476,
-      "stars_today": 889,
-      "forks": 1186,
+      "stars": 20097,
+      "stars_today": 836,
+      "forks": 1279,
       "author": "XiaoYouChR",
       "author_url": "https://github.com/XiaoYouChR",
       "ai_category": "uncategorized",
@@ -205,35 +164,76 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.866573"
+      "fetched_at": "2026-11-28T08:19:17.984047"
+    },
+    {
+      "rank": 4,
+      "name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "crawler",
+        "markdown",
+        "scraper",
+        "html-to-markdown",
+        "llm",
+        "scraping",
+        "web-crawler",
+        "ai-scraping",
+        "webscraping",
+        "web-scraping",
+        "web-data",
+        "web-data-extraction",
+        "ai-agents",
+        "data-extraction",
+        "ai-crawler",
+        "ai-search",
+        "web-scraper",
+        "web-search"
+      ],
+      "stars": 211870,
+      "stars_today": 822,
+      "forks": 11155,
+      "author": "firecrawl",
+      "author_url": "https://github.com/firecrawl",
+      "ai_category": "llm",
+      "ai_subcategories": [
+        "agent"
+      ],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-28T08:19:17.975374"
     },
     {
       "rank": 5,
-      "name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "language": "Shell",
+      "name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
       "topics": [
-        "ai",
-        "brainstorming",
-        "coding",
-        "obra",
-        "sdlc",
-        "skills",
-        "superpowers",
-        "subagent-driven-development"
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
       ],
-      "stars": 327799,
-      "stars_today": 854,
-      "forks": 29087,
-      "author": "obra",
-      "author_url": "https://github.com/obra",
+      "stars": 74597,
+      "stars_today": 725,
+      "forks": 5039,
+      "author": "cathrynlavery",
+      "author_url": "https://github.com/cathrynlavery",
       "ai_category": "agent",
       "ai_subcategories": [],
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.858606"
+      "fetched_at": "2026-11-28T08:19:17.978266"
     },
     {
       "rank": 6,
@@ -263,9 +263,9 @@
         "opusclip-alternative",
         "whisper"
       ],
-      "stars": 17274,
-      "stars_today": 774,
-      "forks": 2420,
+      "stars": 17760,
+      "stars_today": 718,
+      "forks": 2505,
       "author": "zhouxiaoka",
       "author_url": "https://github.com/zhouxiaoka",
       "ai_category": "mcp",
@@ -276,7 +276,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.867155"
+      "fetched_at": "2026-11-28T08:19:17.984971"
     },
     {
       "rank": 7,
@@ -306,9 +306,9 @@
         "automation",
         "terminal"
       ],
-      "stars": 76013,
-      "stars_today": 759,
-      "forks": 6715,
+      "stars": 76503,
+      "stars_today": 675,
+      "forks": 6807,
       "author": "mvanhorn",
       "author_url": "https://github.com/mvanhorn",
       "ai_category": "agent",
@@ -318,7 +318,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.863432"
+      "fetched_at": "2026-11-28T08:19:17.979217"
     },
     {
       "rank": 8,
@@ -327,9 +327,9 @@
       "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
       "language": "Python",
       "topics": [],
-      "stars": 66615,
-      "stars_today": 746,
-      "forks": 6081,
+      "stars": 67149,
+      "stars_today": 666,
+      "forks": 6177,
       "author": "HKUDS",
       "author_url": "https://github.com/HKUDS",
       "ai_category": "uncategorized",
@@ -337,7 +337,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.859218"
+      "fetched_at": "2026-11-28T08:19:17.972604"
     },
     {
       "rank": 9,
@@ -349,9 +349,9 @@
         "artificial-intelligence",
         "large-language-model"
       ],
-      "stars": 71941,
-      "stars_today": 702,
-      "forks": 9354,
+      "stars": 72346,
+      "stars_today": 660,
+      "forks": 9462,
       "author": "jingyaogong",
       "author_url": "https://github.com/jingyaogong",
       "ai_category": "llm",
@@ -359,7 +359,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.859833"
+      "fetched_at": "2026-11-28T08:19:17.973502"
     },
     {
       "rank": 10,
@@ -389,9 +389,9 @@
         "privacy-manifest",
         "pre-submission-checklist"
       ],
-      "stars": 7226,
-      "stars_today": 562,
-      "forks": 503,
+      "stars": 8098,
+      "stars_today": 530,
+      "forks": 610,
       "author": "mjmirza",
       "author_url": "https://github.com/mjmirza",
       "ai_category": "agent",
@@ -401,7 +401,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.864737"
+      "fetched_at": "2026-11-28T08:19:17.981167"
     },
     {
       "rank": 11,
@@ -429,9 +429,9 @@
         "notes",
         "electron"
       ],
-      "stars": 79138,
-      "stars_today": 525,
-      "forks": 5775,
+      "stars": 79591,
+      "stars_today": 474,
+      "forks": 5854,
       "author": "toeverything",
       "author_url": "https://github.com/toeverything",
       "ai_category": "rag",
@@ -439,7 +439,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.865987"
+      "fetched_at": "2026-11-28T08:19:17.983130"
     },
     {
       "rank": 12,
@@ -464,9 +464,9 @@
         "llm",
         "ollama"
       ],
-      "stars": 15951,
-      "stars_today": 327,
-      "forks": 2084,
+      "stars": 16208,
+      "stars_today": 328,
+      "forks": 2167,
       "author": "Tracer-Cloud",
       "author_url": "https://github.com/Tracer-Cloud",
       "ai_category": "llm",
@@ -474,7 +474,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.865309"
+      "fetched_at": "2026-11-28T08:19:17.982080"
     },
     {
       "rank": 13,
@@ -483,9 +483,9 @@
       "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
       "language": "TypeScript",
       "topics": [],
-      "stars": 13409,
-      "stars_today": 309,
-      "forks": 1580,
+      "stars": 13676,
+      "stars_today": 311,
+      "forks": 1636,
       "author": "google-labs-code",
       "author_url": "https://github.com/google-labs-code",
       "ai_category": "mcp",
@@ -493,7 +493,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.864026"
+      "fetched_at": "2026-11-28T08:19:17.980130"
     },
     {
       "rank": 14,
@@ -502,9 +502,9 @@
       "description": "Cursor plugin specification and official plugins",
       "language": "TypeScript",
       "topics": [],
-      "stars": 19870,
-      "stars_today": 270,
-      "forks": 2169,
+      "stars": 20069,
+      "stars_today": 243,
+      "forks": 2247,
       "author": "cursor",
       "author_url": "https://github.com/cursor",
       "ai_category": "ai_tooling",
@@ -512,7 +512,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.860413"
+      "fetched_at": "2026-11-28T08:19:17.974441"
     },
     {
       "rank": 15,
@@ -541,9 +541,9 @@
         "recommendation-system",
         "good-first-issue"
       ],
-      "stars": 12867,
-      "stars_today": 176,
-      "forks": 3754,
+      "stars": 12982,
+      "stars_today": 151,
+      "forks": 3816,
       "author": "openvinotoolkit",
       "author_url": "https://github.com/openvinotoolkit",
       "ai_category": "llm",
@@ -551,7 +551,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.862185"
+      "fetched_at": "2026-11-28T08:19:17.977214"
     },
     {
       "rank": 16,
@@ -576,9 +576,9 @@
         "nginx",
         "security"
       ],
-      "stars": 33574,
-      "stars_today": 150,
-      "forks": 8441,
+      "stars": 33701,
+      "stars_today": 146,
+      "forks": 8487,
       "author": "nginx",
       "author_url": "https://github.com/nginx",
       "ai_category": "uncategorized",
@@ -586,7 +586,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.861612"
+      "fetched_at": "2026-11-28T08:19:17.976292"
     }
   ],
   "new_entrants": [],
@@ -615,9 +615,9 @@
         "security-tools",
         "web-security"
       ],
-      "stars": 25158,
-      "stars_today": 1597,
-      "forks": 2559,
+      "stars": 26496,
+      "stars_today": 1608,
+      "forks": 2709,
       "author": "elementalsouls",
       "author_url": "https://github.com/elementalsouls",
       "ai_category": "llm",
@@ -625,10 +625,38 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.857820"
+      "fetched_at": "2026-11-28T08:19:17.970499"
     },
     {
       "rank": 2,
+      "name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "superpowers",
+        "subagent-driven-development"
+      ],
+      "stars": 328557,
+      "stars_today": 922,
+      "forks": 29203,
+      "author": "obra",
+      "author_url": "https://github.com/obra",
+      "ai_category": "agent",
+      "ai_subcategories": [],
+      "summary_zh": "",
+      "summary_en": "",
+      "first_seen": "",
+      "fetched_at": "2026-11-28T08:19:17.971646"
+    },
+    {
+      "rank": 4,
       "name": "firecrawl/firecrawl",
       "url": "https://github.com/firecrawl/firecrawl",
       "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
@@ -654,9 +682,9 @@
         "web-scraper",
         "web-search"
       ],
-      "stars": 211210,
-      "stars_today": 1046,
-      "forks": 11073,
+      "stars": 211870,
+      "stars_today": 822,
+      "forks": 11155,
       "author": "firecrawl",
       "author_url": "https://github.com/firecrawl",
       "ai_category": "llm",
@@ -666,10 +694,10 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.861015"
+      "fetched_at": "2026-11-28T08:19:17.975374"
     },
     {
-      "rank": 3,
+      "rank": 5,
       "name": "cathrynlavery/diagram-design",
       "url": "https://github.com/cathrynlavery/diagram-design",
       "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
@@ -684,9 +712,9 @@
         "mermaid",
         "svg"
       ],
-      "stars": 74135,
-      "stars_today": 955,
-      "forks": 4966,
+      "stars": 74597,
+      "stars_today": 725,
+      "forks": 5039,
       "author": "cathrynlavery",
       "author_url": "https://github.com/cathrynlavery",
       "ai_category": "agent",
@@ -694,35 +722,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.862860"
-    },
-    {
-      "rank": 5,
-      "name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "description": "An agentic skills framework & software development methodology that works.",
-      "language": "Shell",
-      "topics": [
-        "ai",
-        "brainstorming",
-        "coding",
-        "obra",
-        "sdlc",
-        "skills",
-        "superpowers",
-        "subagent-driven-development"
-      ],
-      "stars": 327799,
-      "stars_today": 854,
-      "forks": 29087,
-      "author": "obra",
-      "author_url": "https://github.com/obra",
-      "ai_category": "agent",
-      "ai_subcategories": [],
-      "summary_zh": "",
-      "summary_en": "",
-      "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.858606"
+      "fetched_at": "2026-11-28T08:19:17.978266"
     },
     {
       "rank": 6,
@@ -752,9 +752,9 @@
         "opusclip-alternative",
         "whisper"
       ],
-      "stars": 17274,
-      "stars_today": 774,
-      "forks": 2420,
+      "stars": 17760,
+      "stars_today": 718,
+      "forks": 2505,
       "author": "zhouxiaoka",
       "author_url": "https://github.com/zhouxiaoka",
       "ai_category": "mcp",
@@ -765,7 +765,7 @@
       "summary_zh": "",
       "summary_en": "",
       "first_seen": "",
-      "fetched_at": "2026-11-27T08:58:22.867155"
+      "fetched_at": "2026-11-28T08:19:17.984971"
     }
   ],
   "insight_zh": "",
